@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LifeSkills Lab | The people who teach what school can't</title>
+<title>LifeSkills Lab | Out-of-school time, on purpose.</title>
 <meta name="description" content="LifeSkills Lab designs out-of-school programs around durable skills and places vetted experts to teach them. Long Island and NYC.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,24 @@ h1,h2,h3{text-wrap:balance}
 #services{background:#fff}
 #convention{background:#fff7d6}
 @media (max-width:980px){.h2wrap{grid-template-columns:1fr}.collage{height:520px}.strip{grid-template-columns:repeat(3,1fr)}.strip img:nth-child(n+4){display:none}}
+.conf{background:#0d1117;color:#f6f6f3;position:relative;overflow:hidden}
+.conf::before{content:"";position:absolute;inset:auto -10% -40% auto;width:700px;height:700px;background:radial-gradient(circle,rgba(47,84,235,.45),transparent 65%)}
+.confwrap{position:relative;max-width:1240px;margin:0 auto;padding:110px 32px;display:flex;flex-direction:column;gap:44px}
+.confhead{display:flex;flex-direction:column;gap:18px}
+.conf .tag{margin:0;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(28px,3vw,40px);color:#8ea6ff}
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.track{border:1px solid #2a3040;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px;background:rgba(255,255,255,.03)}
+.track span,.pass span{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#ffd23f}
+.track b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:32px;line-height:1}.track p{margin:0;color:#c7cad1;font-size:15px}
+.formats{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid #2a3040;border-bottom:1px solid #2a3040}
+.formats div{padding:20px 16px;display:flex;flex-direction:column;gap:6px;border-right:1px solid #2a3040}.formats div:last-child{border-right:0}
+.formats b{font-size:17px}.formats span{font-size:13px;color:#8a8f99}
+.passes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pass{background:#f6f6f3;color:#0d1117;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.pass span{color:#2f54eb}.pass b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:30px;line-height:1}.pass p{margin:0;font-size:15px;color:#3b404a}
+.pass.hot{background:#ffd23f}
+.circle{margin:0;font-size:17px;color:#c7cad1;max-width:760px}.circle b{color:#fff}
+@media (max-width:980px){.tracks,.passes{grid-template-columns:1fr}.formats{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -55,7 +73,7 @@ h1,h2,h3{text-wrap:balance}
         <a href="#services" style="text-decoration: none; color: #3b404a">What We Do</a>
         <a href="#method" style="text-decoration: none; color: #3b404a">The Method</a>
         <a href="#talent" style="text-decoration: none; color: #3b404a">For Experts</a>
-        <a href="#convention" style="text-decoration: none; color: #3b404a">Catalyst Convention</a>
+        <a href="#conference" style="text-decoration: none; color: #3b404a">Catalyst Conference</a>
         <a href="#contact" style="text-decoration: none; background: #0d1117; color: #f6f6f3; padding: 12px 18px; border-radius: 8px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Start a Conversation</a>
       </nav>
     </div>
@@ -437,17 +455,33 @@ h1,h2,h3{text-wrap:balance}
     </div>
   </section>
 
-  <section id="convention" style="border-top: 1px solid #dadbd6">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: center">
-      <div style="display: flex; flex-direction: column; gap: 16px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">COMING 2027 · LONG ISLAND</span>
-        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">The Catalyst <span style="font-style: italic; color: #2f54eb">Convention.</span></h2>
-        <p style="margin: 0; font-size: 20px; color: #3b404a; max-width: 520px">One day for the schools, programs, providers and people building durable skills in kids on Long Island. Find each other, share what works, and leave with partners.</p>
-        <a href="#contact" style="text-decoration: none; background: #2f54eb; color: #ffffff; padding: 15px 22px; border-radius: 8px; font-weight: 500; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start">Get the Invite</a>
+  <section id="conference" class="conf">
+    <div class="confwrap">
+      <div class="confhead">
+        <span class="kicker" style="color:#ffd23f">Coming 2027 · Long Island</span>
+        <h2 style="margin:0;font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;font-size:clamp(56px,7.5vw,120px);line-height:.9;letter-spacing:-.03em">The Catalyst <span style="font-style:italic;color:#ffd23f">Conference.</span></h2>
+        <p class="tag">Make the hours count.</p>
+        <p style="margin:0;font-size:19px;color:#c7cad1;max-width:620px">One day for everyone who owns a kid's hours outside class: the schools, the programs, the experts and the funders. Learn what works, meet who you need, and leave with partners.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px"><a href="#contact" class="pbtn" style="background:#ffd23f;color:#0d1117;box-shadow:none">Get Early Access</a><a href="#contact" class="sbtn" style="color:#f6f6f3;border-color:#f6f6f3">Become a Partner</a></div>
       </div>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
-        <div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">SCHOOLS</span><p style="margin: 0; font-size: 16px">Heads of school and after-school directors</p></div><div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">PROVIDERS</span><p style="margin: 0; font-size: 16px">Camps, enrichment orgs, coaches</p></div><div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">EXPERTS</span><p style="margin: 0; font-size: 16px">Professionals who want to teach</p></div><div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">FUNDERS</span><p style="margin: 0; font-size: 16px">Foundations and employers who back the work</p></div>
+      <div class="tracks">
+        <div class="track"><span>Track 01</span><b>School Leaders</b><p>Heads of school and after-school directors redesigning their out-of-school hours.</p></div>
+        <div class="track"><span>Track 02</span><b>Providers + Experts</b><p>Camps, enrichment orgs and professionals who want to teach what they do.</p></div>
+        <div class="track"><span>Track 03</span><b>Funders + Employers</b><p>Foundations and companies backing durable skills, on their own stage.</p></div>
       </div>
+      <div class="formats">
+        <div><b>Keynotes</b><span>The ideas reshaping out-of-school time</span></div>
+        <div><b>Hands-On Labs</b><span>Experts run real L.I.F.T. sessions, live</span></div>
+        <div><b>Provider Expo</b><span>Meet vetted programs and experts, booth by booth</span></div>
+        <div><b>1:1 Matchmaking</b><span>Schools meet the exact experts they need</span></div>
+        <div><b>Kickoff Reception</b><span>The night before, for leaders and partners</span></div>
+      </div>
+      <div class="passes">
+        <div class="pass"><span>Community</span><b>The full day</b><p>Keynotes, labs and the expo.</p></div>
+        <div class="pass hot"><span>Leader</span><b>Plus the room</b><p>Kickoff reception and 1:1 matchmaking.</p></div>
+        <div class="pass"><span>Partner</span><b>Plus the stage</b><p>Expo booth, a hosted lab, and your logo in front of every school in the room.</p></div>
+      </div>
+      <p class="circle"><b>The Catalyst Circle.</b> The conference is one day. The network runs all year: quarterly meetups, a shared expert bench, and first access to every placement.</p>
     </div>
   </section>
 
@@ -458,13 +492,13 @@ h1,h2,h3{text-wrap:balance}
       <div style="display: flex; flex-direction: column; gap: 18px">
         <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8a8f99">START A CONVERSATION</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; letter-spacing: -0.02em">Tell us about <span style="font-style: italic; color: #8ea6ff">your hours.</span></h2>
-        <p style="margin: 0; font-size: 17px; color: #c7cad1; max-width: 420px">Whether you run a program, want to teach, or want an invite to the Convention, start here.</p>
+        <p style="margin: 0; font-size: 17px; color: #c7cad1; max-width: 420px">Whether you run a program, want to teach, or want early access to the Conference, start here.</p>
       </div>
       <form id="lsl-form" style="display: flex; flex-direction: column; gap: 22px">
         <div style="display: flex; flex-direction: column; gap: 6px"><label for="lsl-name" style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">NAME</label><input id="lsl-name" type="text" style="min-height: 48px; padding: 0; border: 0; border-bottom: 1px solid #3b404a; background: transparent; color: #f6f6f3; font-size: 20px; font-family: inherit"></div><div style="display: flex; flex-direction: column; gap: 6px"><label for="lsl-email" style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">EMAIL</label><input id="lsl-email" type="email" style="min-height: 48px; padding: 0; border: 0; border-bottom: 1px solid #3b404a; background: transparent; color: #f6f6f3; font-size: 20px; font-family: inherit"></div><div style="display: flex; flex-direction: column; gap: 6px"><label for="lsl-org" style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">ORGANIZATION (OPTIONAL)</label><input id="lsl-org" type="text" style="min-height: 48px; padding: 0; border: 0; border-bottom: 1px solid #3b404a; background: transparent; color: #f6f6f3; font-size: 20px; font-family: inherit"></div>
         <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
           <legend style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99; margin-bottom: 10px">I AM</legend>
-          <label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A school or program" checked style="accent-color: #f6f6f3"> A school or program</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="An expert or provider"  style="accent-color: #f6f6f3"> An expert or provider</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A parent"  style="accent-color: #f6f6f3"> A parent</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="Interested in the Convention"  style="accent-color: #f6f6f3"> Interested in the Convention</label>
+          <label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A school or program" checked style="accent-color: #f6f6f3"> A school or program</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="An expert or provider"  style="accent-color: #f6f6f3"> An expert or provider</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A parent"  style="accent-color: #f6f6f3"> A parent</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="Interested in the Conference"  style="accent-color: #f6f6f3"> Interested in the Conference</label>
         </fieldset>
         <button type="submit" style="align-self: flex-start; background: #f6f6f3; color: #0d1117; border: 0; padding: 16px 26px; border-radius: 8px; font-weight: 500; font-size: 17px; font-family: inherit; cursor: pointer">Send</button>
       </form>
