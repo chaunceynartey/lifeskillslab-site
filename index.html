@@ -57,6 +57,10 @@ h1,h2,h3{text-wrap:balance}
 .pass.hot{background:#ffd23f}
 .circle{margin:0;font-size:17px;color:#c7cad1;max-width:760px}.circle b{color:#fff}
 @media (max-width:980px){.tracks,.passes{grid-template-columns:1fr}.formats{grid-template-columns:1fr 1fr}}
+.svcgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.svcgrid h3{font-size:28px !important}
+.bar4{display:grid;grid-template-columns:1fr 1fr;gap:10px}.bar4 div{border:1px solid #3b404a;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px}.bar4 b{font-size:17px;color:#ffd23f}.bar4 span{font-size:13.5px;color:#c7cad1}
+@media (max-width:1100px){.svcgrid{grid-template-columns:1fr 1fr}}@media (max-width:620px){.svcgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -72,7 +76,7 @@ h1,h2,h3{text-wrap:balance}
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px">
         <a href="#services" style="text-decoration: none; color: #3b404a">What We Do</a>
         <a href="#method" style="text-decoration: none; color: #3b404a">The Method</a>
-        <a href="#talent" style="text-decoration: none; color: #3b404a">For Experts</a>
+        <a href="#talent" style="text-decoration: none; color: #3b404a">The Network</a>
         <a href="#conference" style="text-decoration: none; color: #3b404a">Catalyst Conference</a>
         <a href="#contact" style="text-decoration: none; background: #0d1117; color: #f6f6f3; padding: 12px 18px; border-radius: 8px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Start a Conversation</a>
       </nav>
@@ -84,10 +88,10 @@ h1,h2,h3{text-wrap:balance}
       <div class="h2copy">
         <span class="kicker">Durable Skills · Program Design · Expert Talent</span>
         <h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(54px, 6.4vw, 104px); line-height: 0.9; letter-spacing: -0.035em"><span style="white-space:nowrap">Out-of-school</span> time,<br><span style="font-style: italic; color: #2f54eb">on purpose.</span></h1>
-        <p style="margin: 0; font-size: 20px; color: #3b404a; max-width: 500px">After school, half days and break weeks are where kids build the skills that last, when the right person is in the room. LifeSkills Lab designs those hours for schools and programs, and finds, trains and places the experts who teach them.</p>
+        <p style="margin: 0; font-size: 20px; color: #3b404a; max-width: 500px">After school, half days and break weeks are where kids build the skills that last, when the right person is in the room. LifeSkills Lab designs those hours for schools and programs, and is building Long Island's most rigorous, talent-dense network of out-of-school providers and Catalysts: the experts who teach them.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">
           <a href="#contact" class="pbtn">Start a Conversation</a>
-          <a href="#talent" class="sbtn">Join the Expert Network</a>
+          <a href="#talent" class="sbtn">Become a Catalyst</a>
         </div>
         <div class="whofor"><span>Schools</span><span>After-School Programs</span><span>Camps</span><span>Youth Orgs</span><span>Long Island + NYC</span></div>
       </div>
@@ -122,12 +126,13 @@ h1,h2,h3{text-wrap:balance}
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: flex; flex-direction: column; gap: 14px; max-width: 760px">
         <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">WHAT WE DO</span>
-        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">Design the hours. <span style="font-style: italic; color: #2f54eb">Staff the room. Show what grew.</span></h2>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">Design the hours. <span style="font-style: italic; color: #2f54eb">Staff the room. Show what grew. Fund what works.</span></h2>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
+      <div class="svcgrid">
         <div class="svc"><img src="https://images.unsplash.com/photo-1661965607220-d85c073a799b?auto=format&amp;fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="Kids at a table working on a project"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">01 · PROGRAM DESIGN</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Build your out-of-school hours around skills that last.</h3><p style="margin: 0; color: #3b404a">We audit your after-school, break and enrichment time against the Durable Dozen, then design the sessions: who teaches, what kids do, which skill it builds.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a skills map, session plans, a calendar</p></div></div>
         <div class="svc"><img src="https://images.unsplash.com/photo-1745017226336-469ef6a9eafc?auto=format&amp;fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="An expert teaching a child"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">02 · TALENT</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Vetted experts, trained to teach kids.</h3><p style="margin: 0; color: #3b404a">Chefs, carpenters, nurses, founders, coaches. We find them, vet them, train them in our session method, and match them to your program.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: the right person in the room, ready day one</p></div></div>
         <div class="svc"><img src="https://images.pexels.com/photos/5275834/pexels-photo-5275834.jpeg?auto=compress&amp;w=800&amp;h=500&amp;fit=crop" alt="A girl celebrating"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">03 · PROOF</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Families see what kids built, and what lit them up.</h3><p style="margin: 0; color: #3b404a">Every kid gets a Constellation Report: one star per session, sized by skill and lit by interest. Your families finally see the value of the hours.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a report families keep and share</p></div></div>
+        <div class="svc"><img src="https://images.unsplash.com/photo-1543689604-6fe8dbcd1f59?auto=format&amp;fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="A smiling boy surrounded by classmates"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">04 · FUNDING + ACCESS</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Find the money that pays for the hours.</h3><p style="margin: 0; color: #3b404a">We help you find, win and renew the grants and funding that keep strong programs running, so more kids can get in the room.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a funding map and a renewal calendar</p></div></div>
       </div>
     </div>
   </section>
@@ -441,16 +446,17 @@ h1,h2,h3{text-wrap:balance}
   <section id="talent" style="background: #0d1117; color: #f6f6f3">
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 56px; align-items: start">
       <div style="display: flex; flex-direction: column; gap: 18px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8a8f99">FOR EXPERTS AND PROVIDERS</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8a8f99">THE CATALYST NETWORK</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; letter-spacing: -0.02em">Teach what you do <span style="font-style: italic; color: #8ea6ff">for a living.</span></h2>
+        <p style="margin: 0; font-size: 20px; color: #f6f6f3; max-width: 480px">We're building Long Island's most rigorous, talent-dense network of out-of-school providers and <b>Catalysts</b>: professionals who teach what they do, kid-sized.</p>
         <p style="margin: 0; font-size: 18px; color: #c7cad1; max-width: 460px">You don't need to be a teacher. You need to be great at something real and willing to let kids try it. We handle the rest: the format, the training, the placements and the paperwork.</p>
-        <a href="#contact" style="text-decoration: none; background: #f6f6f3; color: #0d1117; padding: 15px 22px; border-radius: 8px; font-weight: 500; align-self: flex-start">Join the Expert Network</a>
+        <a href="#contact" style="text-decoration: none; background: #f6f6f3; color: #0d1117; padding: 15px 22px; border-radius: 8px; font-weight: 500; align-self: flex-start">Become a Catalyst</a>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px">
         <img src="https://images.unsplash.com/photo-1794208936252-b5c79cb5dfa9?auto=format&amp;fit=crop&amp;w=900&amp;h=560&amp;q=80" alt="An expert guiding a child at a pottery wheel" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:16px;margin-bottom:14px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">WHO WE'RE LOOKING FOR</span>
         <div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Chefs</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Carpenters</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Nurses + surgeons</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Founders</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Mechanics</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Musicians</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Gardeners</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Coaches</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Engineers</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Designers</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Emcees</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Financial planners</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Youth providers + orgs</span></div>
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99; margin-top: 18px">HOW IT WORKS</span>
-        <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; color: #c7cad1"><li>Tell us what you do.</li><li>A short call and a vetting check.</li><li>Learn the L.I.F.T. session format in one workshop.</li><li>Get matched to programs that fit your schedule.</li></ol>
+        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99; margin-top: 18px">THE BAR. EVERY CATALYST IS:</span>
+        <div class="bar4"><div><b>Vetted</b><span>Background check, references, a real interview</span></div><div><b>Trained</b><span>Certified in the L.I.F.T. session format</span></div><div><b>Observed</b><span>Watched teaching before a single placement</span></div><div><b>Rated</b><span>Every session scored by kids and programs</span></div></div>
       </div>
     </div>
   </section>
@@ -466,7 +472,7 @@ h1,h2,h3{text-wrap:balance}
       </div>
       <div class="tracks">
         <div class="track"><span>Track 01</span><b>School Leaders</b><p>Heads of school and after-school directors redesigning their out-of-school hours.</p></div>
-        <div class="track"><span>Track 02</span><b>Providers + Experts</b><p>Camps, enrichment orgs and professionals who want to teach what they do.</p></div>
+        <div class="track"><span>Track 02</span><b>Providers + Experts</b><p>Camps, enrichment orgs and the Catalysts who teach what they do.</p></div>
         <div class="track"><span>Track 03</span><b>Funders + Employers</b><p>Foundations and companies backing durable skills, on their own stage.</p></div>
       </div>
       <div class="formats">
@@ -481,7 +487,7 @@ h1,h2,h3{text-wrap:balance}
         <div class="pass hot"><span>Leader</span><b>Plus the room</b><p>Kickoff reception and 1:1 matchmaking.</p></div>
         <div class="pass"><span>Partner</span><b>Plus the stage</b><p>Expo booth, a hosted lab, and your logo in front of every school in the room.</p></div>
       </div>
-      <p class="circle"><b>The Catalyst Circle.</b> The conference is one day. The network runs all year: quarterly meetups, a shared expert bench, and first access to every placement.</p>
+      <p class="circle"><b>The Catalyst Circle.</b> The conference is one day. The network runs all year: quarterly meetups, the shared Catalyst bench, and first access to every placement.</p>
     </div>
   </section>
 
@@ -498,7 +504,7 @@ h1,h2,h3{text-wrap:balance}
         <div style="display: flex; flex-direction: column; gap: 6px"><label for="lsl-name" style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">NAME</label><input id="lsl-name" type="text" style="min-height: 48px; padding: 0; border: 0; border-bottom: 1px solid #3b404a; background: transparent; color: #f6f6f3; font-size: 20px; font-family: inherit"></div><div style="display: flex; flex-direction: column; gap: 6px"><label for="lsl-email" style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">EMAIL</label><input id="lsl-email" type="email" style="min-height: 48px; padding: 0; border: 0; border-bottom: 1px solid #3b404a; background: transparent; color: #f6f6f3; font-size: 20px; font-family: inherit"></div><div style="display: flex; flex-direction: column; gap: 6px"><label for="lsl-org" style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">ORGANIZATION (OPTIONAL)</label><input id="lsl-org" type="text" style="min-height: 48px; padding: 0; border: 0; border-bottom: 1px solid #3b404a; background: transparent; color: #f6f6f3; font-size: 20px; font-family: inherit"></div>
         <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
           <legend style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99; margin-bottom: 10px">I AM</legend>
-          <label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A school or program" checked style="accent-color: #f6f6f3"> A school or program</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="An expert or provider"  style="accent-color: #f6f6f3"> An expert or provider</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A parent"  style="accent-color: #f6f6f3"> A parent</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="Interested in the Conference"  style="accent-color: #f6f6f3"> Interested in the Conference</label>
+          <label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A school or program" checked style="accent-color: #f6f6f3"> A school or program</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A Catalyst or provider"  style="accent-color: #f6f6f3"> A Catalyst or provider</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="A parent"  style="accent-color: #f6f6f3"> A parent</label><label style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px"><input type="radio" name="who" value="Interested in the Conference"  style="accent-color: #f6f6f3"> Interested in the Conference</label>
         </fieldset>
         <button type="submit" style="align-self: flex-start; background: #f6f6f3; color: #0d1117; border: 0; padding: 16px 26px; border-radius: 8px; font-weight: 500; font-size: 17px; font-family: inherit; cursor: pointer">Send</button>
       </form>
