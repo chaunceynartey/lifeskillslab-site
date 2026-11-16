@@ -14,6 +14,32 @@ a{color:#0d1117}a:hover{color:#2f54eb}
 h1,h2,h3{text-wrap:balance}
 </style>
 
+
+<style>
+.hero2{background:linear-gradient(180deg,#f6f6f3 0%,#eef1ff 100%)}
+.h2wrap{max-width:1240px;margin:0 auto;padding:64px 32px 80px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.h2copy{display:flex;flex-direction:column;gap:26px}
+.kicker{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#2f54eb;text-transform:uppercase;font-weight:500}
+.pbtn{text-decoration:none;background:#2f54eb;color:#fff;padding:16px 24px;border-radius:999px;font-weight:600;display:inline-flex;align-items:center;box-shadow:0 10px 24px rgba(47,84,235,.3)}
+.sbtn{text-decoration:none;color:#0d1117;padding:16px 24px;border-radius:999px;font-weight:600;border:1.5px solid #0d1117;display:inline-flex;align-items:center}
+.whofor{display:flex;flex-wrap:wrap;gap:8px}.whofor span{background:#fff;border:1px solid #dadbd6;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:500}
+.collage{position:relative;height:620px}
+.collage figure{position:absolute;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 24px 50px rgba(13,17,23,.22)}
+.collage img{width:100%;height:100%;object-fit:cover;display:block}
+.collage figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);border-radius:999px;padding:6px 12px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.04em}
+.c1{left:0;top:30px;width:56%;height:420px;transform:rotate(-2deg)}
+.c2{right:0;top:0;width:46%;height:260px;transform:rotate(2.5deg)}
+.c3{right:6%;bottom:0;width:48%;height:300px;transform:rotate(-1deg)}
+.star-badge{position:absolute;left:6%;bottom:40px;background:#0d1117;color:#fff;border-radius:16px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 16px 30px rgba(0,0,0,.3)}
+.star-badge b{display:block;font-size:14px}.star-badge span{font-size:12px;color:#c7cad1}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0}.strip img{width:100%;aspect-ratio:7/5;object-fit:cover;display:block}
+.svc{background:#fff;border:1px solid #dadbd6;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.svc>img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.svcb{padding:24px;display:flex;flex-direction:column;gap:12px}
+#services{background:#fff}
+#convention{background:#fff7d6}
+@media (max-width:980px){.h2wrap{grid-template-columns:1fr}.collage{height:520px}.strip{grid-template-columns:repeat(3,1fr)}.strip img:nth-child(n+4){display:none}}
+</style>
 </head>
 <body>
 
@@ -26,39 +52,41 @@ h1,h2,h3{text-wrap:balance}
         <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e; letter-spacing: 0.04em">LONG ISLAND, NY</span>
       </a>
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px">
-        <a href="#services" style="text-decoration: none; color: #3b404a">What we do</a>
-        <a href="#method" style="text-decoration: none; color: #3b404a">The method</a>
-        <a href="#talent" style="text-decoration: none; color: #3b404a">For experts</a>
+        <a href="#services" style="text-decoration: none; color: #3b404a">What We Do</a>
+        <a href="#method" style="text-decoration: none; color: #3b404a">The Method</a>
+        <a href="#talent" style="text-decoration: none; color: #3b404a">For Experts</a>
         <a href="#convention" style="text-decoration: none; color: #3b404a">Catalyst Convention</a>
-        <a href="#contact" style="text-decoration: none; background: #0d1117; color: #f6f6f3; padding: 12px 18px; border-radius: 8px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Start a conversation</a>
+        <a href="#contact" style="text-decoration: none; background: #0d1117; color: #f6f6f3; padding: 12px 18px; border-radius: 8px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Start a Conversation</a>
       </nav>
     </div>
   </header>
 
-  <section id="top">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 72px 32px 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 56px; align-items: center">
-      <div style="display: flex; flex-direction: column; gap: 28px; min-width: 0">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">DURABLE SKILLS · PROGRAM DESIGN · TALENT</span>
-        <h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(56px, 7.6vw, 120px); line-height: 0.9; letter-spacing: -0.035em">The people who teach<br><span style="font-style: italic; color: #2f54eb">what school can't.</span></h1>
-        <p style="margin: 0; font-size: 20px; color: #3b404a; max-width: 500px">LifeSkills Lab helps schools and youth programs design the hours outside class, and finds, trains and places the experts who make those hours count.</p>
-        <dl style="margin: 0; display: grid; grid-template-columns: auto 1fr; column-gap: 20px; row-gap: 10px; font-family: 'Geist Mono', monospace; font-size: 13px; border-top: 1px solid #dadbd6; padding-top: 18px; max-width: 500px">
-          <dt style="color: #5b616e">FOR</dt><dd style="margin: 0">Schools, after-school programs, camps, youth orgs</dd>
-          <dt style="color: #5b616e">AND</dt><dd style="margin: 0">Experts and providers who want to teach what they do</dd>
-          <dt style="color: #5b616e">WHERE</dt><dd style="margin: 0">Long Island and New York City</dd>
-        </dl>
+  <section id="top" class="hero2">
+    <div class="h2wrap">
+      <div class="h2copy">
+        <span class="kicker">Durable Skills · Program Design · Expert Talent</span>
+        <h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(54px, 6.4vw, 104px); line-height: 0.9; letter-spacing: -0.035em"><span style="white-space:nowrap">Out-of-school</span> time,<br><span style="font-style: italic; color: #2f54eb">on purpose.</span></h1>
+        <p style="margin: 0; font-size: 20px; color: #3b404a; max-width: 500px">After school, half days and break weeks are where kids build the skills that last, when the right person is in the room. LifeSkills Lab designs those hours for schools and programs, and finds, trains and places the experts who teach them.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">
-          <a href="#contact" style="text-decoration: none; background: #2f54eb; color: #ffffff; padding: 15px 22px; border-radius: 8px; font-weight: 500; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center">Start a conversation</a>
-          <a href="#talent" style="text-decoration: none; color: #0d1117; padding: 15px 4px; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center; border-bottom: 1px solid #0d1117">Join the expert network</a>
+          <a href="#contact" class="pbtn">Start a Conversation</a>
+          <a href="#talent" class="sbtn">Join the Expert Network</a>
         </div>
+        <div class="whofor"><span>Schools</span><span>After-School Programs</span><span>Camps</span><span>Youth Orgs</span><span>Long Island + NYC</span></div>
       </div>
-      <figure style="margin: 0; position: relative; min-width: 0">
-        <img src="https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg?auto=compress&amp;w=900&amp;h=1125&amp;fit=crop" alt="Kids working on a hands-on project together at a table" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; display: block; background: #e7e8e3">
-        <figcaption style="position: absolute; left: 18px; bottom: 18px; right: 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px; background: rgba(246,246,243,0.92); border-radius: 10px; padding: 12px 16px">
-          <span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #5b616e">A L.I.F.T. SESSION</span>
-          <span style="font-size: 14px">Real expert. Real skill. Kid-sized.</span>
-        </figcaption>
-      </figure>
+      <div class="collage">
+        <figure class="c1"><img src="https://images.unsplash.com/photo-1745017226336-469ef6a9eafc?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=80" alt="A craftsman and a child working on a wooden project together"><figcaption>The Carpenter · Measure twice</figcaption></figure>
+        <figure class="c2"><img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=80" alt="A boy concentrating as he writes at a table beside a classmate"><figcaption>Focus</figcaption></figure>
+        <figure class="c3"><img src="https://images.pexels.com/photos/5275834/pexels-photo-5275834.jpeg?auto=compress&amp;w=800&amp;h=800&amp;fit=crop" alt="A girl celebrating with her arms raised among classmates"><figcaption>Teach Back · She owns it</figcaption></figure>
+        <div class="star-badge"><svg viewBox="0 -5 100 100" width="34" height="34"><polygon points="50,0 61.76,33.82 97.55,34.55 69.02,56.18 79.39,90.45 50,70 20.61,90.45 30.98,56.18 2.45,34.55 38.24,33.82" fill="#ffd23f"/></svg><div><b>New star earned</b><span>Creativity · lit up</span></div></div>
+      </div>
     </div>
+  </section>
+  <section class="strip" aria-label="Moments from LifeSkills sessions">
+    <img src="https://images.unsplash.com/photo-1794208936252-b5c79cb5dfa9?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=80" alt="An adult and a child shaping clay on a pottery wheel">
+    <img src="https://images.unsplash.com/photo-1543689604-6fe8dbcd1f59?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=80" alt="A smiling boy surrounded by classmates">
+    <img src="https://images.pexels.com/photos/3992949/pexels-photo-3992949.jpeg?auto=compress&amp;w=700&amp;h=500&amp;fit=crop" alt="Kids working on a project together at a table">
+    <img src="https://images.unsplash.com/photo-1634393305859-dfb151e2fd54?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=80" alt="A girl rolling out dough at a kitchen counter">
+    <img src="https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&amp;fit=crop&amp;w=700&amp;h=500&amp;q=80" alt="Two boys working side by side at a table">
   </section>
 
   <section style="border-top: 1px solid #dadbd6">
@@ -79,9 +107,9 @@ h1,h2,h3{text-wrap:balance}
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">Design the hours. <span style="font-style: italic; color: #2f54eb">Staff the room. Show what grew.</span></h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
-        <div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">01 · PROGRAM DESIGN</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Build your out-of-school hours around skills that last.</h3><p style="margin: 0; color: #3b404a">We audit your after-school, break and enrichment time against the Durable Dozen, then design the sessions: who teaches, what kids do, which skill it builds.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a skills map, session plans, a calendar</p></div>
-        <div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">02 · TALENT</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Vetted experts, trained to teach kids.</h3><p style="margin: 0; color: #3b404a">Chefs, carpenters, nurses, founders, coaches. We find them, vet them, train them in our session method, and match them to your program.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: the right person in the room, ready day one</p></div>
-        <div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">03 · PROOF</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Families see what kids built, and what lit them up.</h3><p style="margin: 0; color: #3b404a">Every kid gets a Constellation Report: one star per session, sized by skill and lit by interest. Your families finally see the value of the hours.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a report families keep and share</p></div>
+        <div class="svc"><img src="https://images.unsplash.com/photo-1661965607220-d85c073a799b?auto=format&amp;fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="Kids at a table working on a project"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">01 · PROGRAM DESIGN</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Build your out-of-school hours around skills that last.</h3><p style="margin: 0; color: #3b404a">We audit your after-school, break and enrichment time against the Durable Dozen, then design the sessions: who teaches, what kids do, which skill it builds.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a skills map, session plans, a calendar</p></div></div>
+        <div class="svc"><img src="https://images.unsplash.com/photo-1745017226336-469ef6a9eafc?auto=format&amp;fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="An expert teaching a child"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">02 · TALENT</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Vetted experts, trained to teach kids.</h3><p style="margin: 0; color: #3b404a">Chefs, carpenters, nurses, founders, coaches. We find them, vet them, train them in our session method, and match them to your program.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: the right person in the room, ready day one</p></div></div>
+        <div class="svc"><img src="https://images.pexels.com/photos/5275834/pexels-photo-5275834.jpeg?auto=compress&amp;w=800&amp;h=500&amp;fit=crop" alt="A girl celebrating"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">03 · PROOF</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Families see what kids built, and what lit them up.</h3><p style="margin: 0; color: #3b404a">Every kid gets a Constellation Report: one star per session, sized by skill and lit by interest. Your families finally see the value of the hours.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a report families keep and share</p></div></div>
       </div>
     </div>
   </section>
@@ -398,10 +426,10 @@ h1,h2,h3{text-wrap:balance}
         <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8a8f99">FOR EXPERTS AND PROVIDERS</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; letter-spacing: -0.02em">Teach what you do <span style="font-style: italic; color: #8ea6ff">for a living.</span></h2>
         <p style="margin: 0; font-size: 18px; color: #c7cad1; max-width: 460px">You don't need to be a teacher. You need to be great at something real and willing to let kids try it. We handle the rest: the format, the training, the placements and the paperwork.</p>
-        <a href="#contact" style="text-decoration: none; background: #f6f6f3; color: #0d1117; padding: 15px 22px; border-radius: 8px; font-weight: 500; align-self: flex-start">Join the expert network</a>
+        <a href="#contact" style="text-decoration: none; background: #f6f6f3; color: #0d1117; padding: 15px 22px; border-radius: 8px; font-weight: 500; align-self: flex-start">Join the Expert Network</a>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">WHO WE'RE LOOKING FOR</span>
+        <img src="https://images.unsplash.com/photo-1794208936252-b5c79cb5dfa9?auto=format&amp;fit=crop&amp;w=900&amp;h=560&amp;q=80" alt="An expert guiding a child at a pottery wheel" style="width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:16px;margin-bottom:14px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99">WHO WE'RE LOOKING FOR</span>
         <div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Chefs</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Carpenters</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Nurses + surgeons</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Founders</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Mechanics</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Musicians</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Gardeners</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Coaches</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Engineers</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Designers</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Emcees</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Financial planners</span><span style="border: 1px solid #3b404a; border-radius: 999px; padding: 10px 16px; font-size: 15px">Youth providers + orgs</span></div>
         <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #8a8f99; margin-top: 18px">HOW IT WORKS</span>
         <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; color: #c7cad1"><li>Tell us what you do.</li><li>A short call and a vetting check.</li><li>Learn the L.I.F.T. session format in one workshop.</li><li>Get matched to programs that fit your schedule.</li></ol>
@@ -415,7 +443,7 @@ h1,h2,h3{text-wrap:balance}
         <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">COMING 2027 · LONG ISLAND</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">The Catalyst <span style="font-style: italic; color: #2f54eb">Convention.</span></h2>
         <p style="margin: 0; font-size: 20px; color: #3b404a; max-width: 520px">One day for the schools, programs, providers and people building durable skills in kids on Long Island. Find each other, share what works, and leave with partners.</p>
-        <a href="#contact" style="text-decoration: none; background: #2f54eb; color: #ffffff; padding: 15px 22px; border-radius: 8px; font-weight: 500; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start">Get the invite</a>
+        <a href="#contact" style="text-decoration: none; background: #2f54eb; color: #ffffff; padding: 15px 22px; border-radius: 8px; font-weight: 500; min-height: 48px; box-sizing: border-box; display: inline-flex; align-items: center; align-self: flex-start">Get the Invite</a>
       </div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
         <div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">SCHOOLS</span><p style="margin: 0; font-size: 16px">Heads of school and after-school directors</p></div><div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">PROVIDERS</span><p style="margin: 0; font-size: 16px">Camps, enrichment orgs, coaches</p></div><div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">EXPERTS</span><p style="margin: 0; font-size: 16px">Professionals who want to teach</p></div><div style="background: #ffffff; border: 1px solid #dadbd6; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">FUNDERS</span><p style="margin: 0; font-size: 16px">Foundations and employers who back the work</p></div>
@@ -423,15 +451,7 @@ h1,h2,h3{text-wrap:balance}
     </div>
   </section>
 
-  <section style="border-top: 1px solid #dadbd6">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 80px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px; align-items: baseline">
-      <div style="display: flex; flex-direction: column; gap: 12px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">WHO RUNS IT</span>
-        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.05">Led by Andrea Nartey</h2>
-      </div>
-      <p style="margin: 0; font-size: 18px; color: #3b404a; max-width: 520px">Andrea is an educator with a background in PreK to 8 literacy and educational leadership. She designs each Lab and works alongside every expert in the room.</p>
-    </div>
-  </section>
+
 
   <section id="contact" style="background: #0d1117; color: #f6f6f3">
     <div style="max-width: 1240px; margin: 0 auto; padding: 112px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 64px">
