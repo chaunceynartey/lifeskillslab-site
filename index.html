@@ -61,6 +61,17 @@ h1,h2,h3{text-wrap:balance}
 .svcgrid h3{font-size:28px !important}
 .bar4{display:grid;grid-template-columns:1fr 1fr;gap:10px}.bar4 div{border:1px solid #3b404a;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:4px}.bar4 b{font-size:17px;color:#ffd23f}.bar4 span{font-size:13.5px;color:#c7cad1}
 @media (max-width:1100px){.svcgrid{grid-template-columns:1fr 1fr}}@media (max-width:620px){.svcgrid{grid-template-columns:1fr}}
+.cday{background:#eef1ff;border-top:1px solid #dadbd6}
+.cdwrap{max-width:1240px;margin:0 auto;padding:100px 32px;display:flex;flex-direction:column;gap:36px}
+.vsgrid{display:grid;grid-template-columns:1fr 1fr .9fr;gap:16px;align-items:stretch}
+.old,.new{border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.old{background:#fff;color:#8a8f99}.old p{margin:0;text-decoration:line-through;text-decoration-color:#e4572e;font-size:17px}
+.new{background:#0d1117;color:#f6f6f3}.new p{margin:0;font-size:17px;padding-left:24px;position:relative}.new p::before{content:"★";position:absolute;left:0;color:#ffd23f}
+.old span,.new span{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}.new span{color:#ffd23f}
+.cdimg{margin:0;position:relative;border-radius:18px;overflow:hidden}.cdimg img{width:100%;height:100%;object-fit:cover;display:block;min-height:320px}
+.cdimg figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);border-radius:999px;padding:6px 12px;font-family:'Geist Mono',monospace;font-size:11px}
+.cdsteps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cdsteps div{display:flex;flex-direction:column;gap:6px;border-top:2px solid #2f54eb;padding-top:12px}.cdsteps b{font-family:'Geist Mono',monospace;color:#2f54eb}.cdsteps span{font-size:15.5px}
+@media (max-width:980px){.vsgrid,.cdsteps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -75,6 +86,7 @@ h1,h2,h3{text-wrap:balance}
       </a>
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px">
         <a href="#services" style="text-decoration: none; color: #3b404a">What We Do</a>
+        <a href="#careerday" style="text-decoration: none; color: #3b404a">Career Lab</a>
         <a href="#method" style="text-decoration: none; color: #3b404a">The Method</a>
         <a href="#talent" style="text-decoration: none; color: #3b404a">The Network</a>
         <a href="#conference" style="text-decoration: none; color: #3b404a">Catalyst Conference</a>
@@ -134,6 +146,30 @@ h1,h2,h3{text-wrap:balance}
         <div class="svc"><img src="https://images.pexels.com/photos/5275834/pexels-photo-5275834.jpeg?auto=compress&amp;w=800&amp;h=500&amp;fit=crop" alt="A girl celebrating"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">03 · PROOF</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Families see what kids built, and what lit them up.</h3><p style="margin: 0; color: #3b404a">Every kid gets a Constellation Report: one star per session, sized by skill and lit by interest. Your families finally see the value of the hours.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a report families keep and share</p></div></div>
         <div class="svc"><img src="https://images.unsplash.com/photo-1543689604-6fe8dbcd1f59?auto=format&amp;fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="A smiling boy surrounded by classmates"><div class="svcb"><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #2f54eb">04 · FUNDING + ACCESS</span><h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1.05">Find the money that pays for the hours.</h3><p style="margin: 0; color: #3b404a">We help you find, win and renew the grants and funding that keep strong programs running, so more kids can get in the room.</p><p style="margin: 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e">YOU GET: a funding map and a renewal calendar</p></div></div>
       </div>
+    </div>
+  </section>
+
+  <section id="careerday" class="cday">
+    <div class="cdwrap">
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:760px">
+        <span class="kicker">For Schools · Career Lab</span>
+        <h2 style="margin:0;font-family: 'Instrument Serif', Georgia, serif; font-weight: 400;font-size:clamp(44px,5.6vw,84px);line-height:.95;letter-spacing:-.02em">Career Day is broken. <span style="font-style:italic;color:#2f54eb">We rebuild it.</span></h2>
+        <p style="margin:0;font-size:19px;color:#3b404a">You know the one: a parent at the front of the room, a slideshow about their job, thirty kids watching the clock. We turn it into a Career Lab, where kids don't hear about the work. They do it.</p>
+      </div>
+      <div class="vsgrid">
+        <div class="old"><span>The old Career Day</span>
+          <p>Parents talk at the front</p><p>Slides about a typical day</p><p>Kids sit and listen</p><p>"Any questions?" Silence.</p><p>Forgotten by dinner</p></div>
+        <div class="new"><span>A LifeSkills Career Lab</span>
+          <p>Parents run hands-on stations</p><p>A 20-minute L.I.F.T. session per job</p><p>Kids rotate and try the real thing</p><p>Every kid teaches one thing back</p><p>A star for every station, a constellation by the end</p></div>
+        <figure class="cdimg"><img src="https://images.unsplash.com/photo-1794208936252-b5c79cb5dfa9?auto=format&amp;fit=crop&amp;w=900&amp;h=1000&amp;q=80" alt="An adult guiding a child's hands at a pottery wheel"><figcaption>Station 3 · Make it with your hands</figcaption></figure>
+      </div>
+      <div class="cdsteps">
+        <div><b>01</b><span>We recruit and match parent and community volunteers to stations</span></div>
+        <div><b>02</b><span>We coach every volunteer in one hour to run a kid-sized session</span></div>
+        <div><b>03</b><span>We run the day, so your staff can watch it work</span></div>
+        <div><b>04</b><span>Families get a constellation of what lit their kid up</span></div>
+      </div>
+      <a href="#contact" class="pbtn" style="align-self:flex-start">Plan Your Career Lab</a>
     </div>
   </section>
 
