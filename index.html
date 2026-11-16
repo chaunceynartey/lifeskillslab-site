@@ -32,6 +32,14 @@ h1,h2,h3{text-wrap:balance}
 .c3{right:6%;bottom:0;width:48%;height:300px;transform:rotate(-1deg)}
 .star-badge{position:absolute;left:6%;bottom:40px;background:#0d1117;color:#fff;border-radius:16px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 16px 30px rgba(0,0,0,.3)}
 .star-badge b{display:block;font-size:14px}.star-badge span{font-size:12px;color:#c7cad1}
+@media (max-width:700px){
+.collage{height:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 18px;margin:0 -32px;padding-left:32px;padding-right:32px;scrollbar-width:none}
+.collage::-webkit-scrollbar{display:none}
+.collage figure{position:relative;inset:auto;transform:none;flex:0 0 78%;height:400px;scroll-snap-align:center}
+.collage .c2{order:1}.collage .c1{order:2}.collage .c3{order:3}
+.star-badge{display:none}
+.h2wrap{padding:40px 24px 56px}
+}
 .strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0}.strip img{width:100%;aspect-ratio:7/5;object-fit:cover;display:block}
 .svc{background:#fff;border:1px solid #dadbd6;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
 .svc>img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
@@ -114,7 +122,6 @@ h1,h2,h3{text-wrap:balance}
     <div style="max-width: 1240px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
       <a href="#top" style="text-decoration: none; display: flex; align-items: baseline; gap: 14px">
         <span style="display: inline-flex; align-items: center; gap: 10px"><svg width="32" height="32" viewBox="0 0 48 48" aria-hidden="true"><line x1="24.00" y1="7.50" x2="24.00" y2="2.50" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="32.25" y1="9.71" x2="34.75" y2="5.38" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="38.29" y1="15.75" x2="42.62" y2="13.25" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="40.50" y1="24.00" x2="45.50" y2="24.00" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="38.29" y1="32.25" x2="42.62" y2="34.75" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="32.25" y1="38.29" x2="34.75" y2="42.62" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="24.00" y1="40.50" x2="24.00" y2="45.50" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="15.75" y1="38.29" x2="13.25" y2="42.62" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="9.71" y1="32.25" x2="5.38" y2="34.75" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="7.50" y1="24.00" x2="2.50" y2="24.00" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="9.71" y1="15.75" x2="5.38" y2="13.25" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="15.75" y1="9.71" x2="13.25" y2="5.38" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><path d="M24 15.2 V24 H30 L33.5 20" fill="none" stroke="#0d1117" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size: 19px; line-height: 1; letter-spacing: -0.025em; color: #0d1117; white-space: nowrap" aria-label="LifeSkills Lab"><span style="font-weight: 600">L<span style="position: relative; display: inline-block">ı<span style="position: absolute; left: 50%; top: -1.0px; width: 4.8px; height: 4.8px; margin-left: -2.4px; border-radius: 50%; background: #2f54eb"></span></span>feSkills</span><span style="font-weight: 400; opacity: 0.65"> Lab</span></span></span>
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #5b616e; letter-spacing: 0.04em">LONG ISLAND, NY</span>
       </a>
       <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px">
         <a href="#services" style="text-decoration: none; color: #3b404a">What We Do</a>
@@ -159,7 +166,7 @@ h1,h2,h3{text-wrap:balance}
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px">
       <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">The hours after the bell. <span style="font-style: italic; color: #2f54eb">Nobody designs them.</span></h2>
       <div style="display: flex; flex-direction: column; gap: 16px; max-width: 520px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">THE IN-BETWEEN</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">THE IN-BETWEEN</span>
         <p style="margin: 0; font-size: 20px; color: #3b404a">After school. Half days. Break weeks. These hours usually get filled with whatever's easiest and whoever is available.</p>
         <p style="margin: 0; font-size: 20px">The skills kids need most, like judgment, grit and communication, get built in exactly these hours, when the right person is in the room.</p>
       </div>
@@ -170,7 +177,7 @@ h1,h2,h3{text-wrap:balance}
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: end">
         <div style="display: flex; flex-direction: column; gap: 14px">
-          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">THE NOUNS</span>
+          <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">THE NOUNS</span>
           <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">Extraordinary people, places and things. <span style="font-style: italic; color: #2f54eb">In kids' hands.</span></h2>
         </div>
         <p style="margin: 0; font-size: 18px; color: #3b404a; max-width: 520px">No worksheets about careers. We bring the real thing: the person who does it, the place it happens and the tools they actually use. Then we put them in kids' hands.</p>
@@ -186,7 +193,7 @@ h1,h2,h3{text-wrap:balance}
   <section id="services" style="border-top: 1px solid #dadbd6">
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: flex; flex-direction: column; gap: 14px; max-width: 1000px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">WHAT WE DO</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">WHAT WE DO</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(48px, 6.4vw, 92px); line-height: 1; letter-spacing: -0.02em">Design the hours. <span style="font-style: italic; color: #2f54eb">Staff the room. Show what grew. Fund what works.</span></h2>
       </div>
       <div class="svcgrid">
@@ -226,7 +233,7 @@ h1,h2,h3{text-wrap:balance}
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 48px">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: end">
         <div style="display: flex; flex-direction: column; gap: 14px">
-          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">HOW A SESSION RUNS · 90 MINUTES · L.I.F.T.</span>
+          <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">HOW A SESSION RUNS · 90 MINUTES · L.I.F.T.</span>
           <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">See something amazing. <span style="font-style: italic; color: #2f54eb">Then do it yourself.</span></h2>
         </div>
         <p style="margin: 0; font-size: 18px; color: #3b404a; max-width: 520px">Every session sparks two things at once: a real-world career kids may never have heard of, and a durable skill they'll use no matter what they become.</p>
@@ -268,7 +275,7 @@ h1,h2,h3{text-wrap:balance}
   <section id="examples" style="border-top: 1px solid #dadbd6">
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: flex; flex-direction: column; gap: 14px; max-width: 680px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">CATALYSTS IN ACTION</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">CATALYSTS IN ACTION</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">What a Catalyst runs. <span style="font-style: italic; color: #2f54eb">Picture it.</span></h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 24px">
@@ -358,7 +365,7 @@ h1,h2,h3{text-wrap:balance}
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: end">
         <div style="display: flex; flex-direction: column; gap: 14px">
-          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">THE DURABLE DOZEN</span>
+          <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">THE DURABLE DOZEN</span>
           <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">Jobs will change. <span style="font-style: italic; color: #2f54eb">These won't.</span></h2>
         </div>
         <p style="margin: 0; font-size: 18px; color: #3b404a; max-width: 520px">Durable skills are the human skills that last across every career. Each session builds one, so whatever path lights your kid up, they carry these with them.</p>
@@ -434,7 +441,7 @@ h1,h2,h3{text-wrap:balance}
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-direction: column; gap: 48px">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: end">
         <div style="display: flex; flex-direction: column; gap: 14px">
-          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">HOW TO READ A STAR</span>
+          <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">HOW TO READ A STAR</span>
           <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">Every star is a path. <span style="font-style: italic; color: #2f54eb">Size is skill. Brightness is interest.</span></h2>
         </div>
         <p style="margin: 0; font-size: 18px; color: #3b404a; max-width: 520px">Every star is a career path your kid tried with a Catalyst. How big it is shows how strong they got. How bright it is shows how much it lit them up. Its points show which durable skills that path builds. The two don't always match, and that's the point.</p>
@@ -471,7 +478,7 @@ h1,h2,h3{text-wrap:balance}
   <section id="report">
     <div style="max-width: 1240px; margin: 0 auto; padding: 112px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 64px; align-items: center">
       <div style="display: flex; flex-direction: column; gap: 18px; max-width: 480px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #5b616e">THE CONSTELLATION REPORT</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #2f54eb">THE CONSTELLATION REPORT</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.02em">See which paths they're good at, and which lit them up.</h2>
         <p style="margin: 0; font-size: 18px; color: #3b404a">At the end of a program, every family gets a Constellation Report. Every star is a career path their kid actually tried with a Catalyst. Size shows how strong they got. Brightness shows how much it lit them up. The points show the durable skills that path builds, always in the same spot, so you can see which skills keep showing up. Plus one North Star Goal for what's next.</p>
       </div>
@@ -542,7 +549,7 @@ h1,h2,h3{text-wrap:balance}
   <section id="talent" style="background: #0d1117; color: #f6f6f3">
     <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 56px; align-items: start">
       <div style="display: flex; flex-direction: column; gap: 18px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8a8f99">THE CATALYST NETWORK</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #8ea6ff">THE CATALYST NETWORK</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; letter-spacing: -0.02em">Teach what you do <span style="font-style: italic; color: #8ea6ff">for a living.</span></h2>
         <p style="margin: 0; font-size: 20px; color: #f6f6f3; max-width: 480px">We're building Long Island's most rigorous, talent-dense network of out-of-school providers and <b>Catalysts</b>: professionals who teach what they do, kid-sized.</p>
         <p style="margin: 0; font-size: 18px; color: #c7cad1; max-width: 460px">You don't need to be a teacher. You need to be great at something real and willing to let kids try it. We handle the rest: the format, the training, the placements and the paperwork.</p>
@@ -555,7 +562,7 @@ h1,h2,h3{text-wrap:balance}
         <div class="bar4"><div><b>Vetted</b><span>Background check, references, a real interview</span></div><div><b>Trained</b><span>Certified in the L.I.F.T. session format</span></div><div><b>Observed</b><span>Watched teaching before a single placement</span></div><div><b>Rated</b><span>Every session scored by kids and programs</span></div></div>
       </div>
       <div class="stakes">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8a8f99">WHY THE BAR IS HIGH</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #8ea6ff">WHY THE BAR IS HIGH</span>
         <h3>Not every parent is a Catalyst. <i>One bad hour can close a door for good.</i></h3>
         <div class="hours">
           <div class="hour good"><span class="tag">ONE GREAT HOUR</span><p>A nurse hands a nine-year-old a needle and a banana and talks her through her first stitch.</p><span class="out">She goes home saying, "I could do that."</span></div>
@@ -601,7 +608,7 @@ h1,h2,h3{text-wrap:balance}
   <section id="contact" style="background: #0d1117; color: #f6f6f3">
     <div style="max-width: 1240px; margin: 0 auto; padding: 112px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 64px">
       <div style="display: flex; flex-direction: column; gap: 18px">
-        <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: #8a8f99">START A CONVERSATION</span>
+        <span style="font-family: 'Geist Mono', monospace; font-size: clamp(17px, 1.9vw, 24px); font-weight: 700; letter-spacing: 0.08em; color: #8ea6ff">START A CONVERSATION</span>
         <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 80px); line-height: 0.95; letter-spacing: -0.02em">Tell us about <span style="font-style: italic; color: #8ea6ff">your hours.</span></h2>
         <p style="margin: 0; font-size: 17px; color: #c7cad1; max-width: 420px">Whether you run a program, want to teach, or want early access to the Conference, start here.</p>
       </div>
@@ -631,5 +638,26 @@ document.getElementById('lsl-form').addEventListener('submit',function(e){
   location.href='mailto:chauncey@howiwithai.com?subject='+encodeURIComponent('LifeSkills Lab: '+who)+'&body='+encodeURIComponent(body);
 });
 </script>
+<style>
+.hb{display:none;background:none;border:0;color:inherit;padding:8px;margin:-8px;cursor:pointer;line-height:0}
+@media (max-width:860px){
+ .hbhost{flex-wrap:nowrap!important;position:relative}
+ .hbhost .hbl{display:none!important}
+ .hbhost .hb{display:inline-flex}
+ .hbhost.open .hbl{display:flex!important;flex-direction:column;align-items:stretch!important;gap:2px!important;position:absolute;top:100%;left:0;right:0;margin-top:12px;padding:12px;border-radius:16px;background:var(--hbbg);box-shadow:0 24px 48px rgba(0,0,0,.35);z-index:60}
+ .hbhost.open .hbl a{padding:12px 10px!important;font-size:17px!important;display:flex!important}
+ .hbhost.open .hbl a:last-child{justify-content:center;margin-top:8px;padding:14px!important}
+}
+</style>
+<script data-bg="#ffffff">
+(function(){var nav=document.querySelector('nav[aria-label="Main"]');if(!nav)return;var host,links;
+if(nav.firstElementChild&&nav.firstElementChild.tagName==='A'&&nav.lastElementChild.tagName!=='A'){host=nav;links=nav.lastElementChild}else{host=nav.parentElement;links=nav}
+host.classList.add('hbhost');links.classList.add('hbl');host.style.setProperty('--hbbg',document.currentScript.dataset.bg||'#0b1226');
+var b=document.createElement('button');b.className='hb';b.type='button';b.setAttribute('aria-label','Open menu');b.setAttribute('aria-expanded','false');
+b.innerHTML='<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+host.insertBefore(b,links);b.onclick=function(){var o=host.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')};
+links.addEventListener('click',function(e){if(e.target.closest('a')){host.classList.remove('open');b.setAttribute('aria-expanded','false')}});})();
+</script>
+
 </body>
 </html>
