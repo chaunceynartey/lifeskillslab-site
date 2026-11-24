@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Catalyst Network | LifeSkills Lab</title>
+<meta name="description" content="Long Island's network for out-of-school time: programs that need great adults, and Catalysts vetted one person at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+html,body{overflow-x:clip}
+body{margin:0;background:#f6f6f3;color:#0d1117;font-family:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.55}
+a{color:#0d1117}a:hover{color:#2f54eb}
+h1,h2,h3{text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto;padding:88px 32px}
+.eyb{font-family:'Geist Mono',monospace;font-size:clamp(15px,1.6vw,20px);font-weight:700;letter-spacing:.08em;color:#2f54eb;text-transform:uppercase}
+.h1{margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(52px,7vw,104px);line-height:.95;letter-spacing:-.03em}
+.h2{margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-.02em}
+.it{font-style:italic;color:#2f54eb}
+.lede{margin:0;font-size:20px;color:#3b404a;max-width:620px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:10px;font-weight:600;text-decoration:none}
+.btn.p{background:#2f54eb;color:#fff}.btn.s{border:1.5px solid #0d1117;color:#0d1117}
+.hero{background:linear-gradient(180deg,#f6f6f3 0%,#eef1ff 100%)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center}
+.sides{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.side{background:#fff;border:1px solid #dadbd6;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.side small{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#2f54eb;font-weight:700}
+.side b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:28px;line-height:1}
+.side span{font-size:14px;color:#3b404a}
+.hub{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-family:'Geist Mono',monospace;font-size:10px;color:#5b616e;letter-spacing:.08em;text-align:center}
+.hub svg{filter:drop-shadow(0 0 10px #2f54eb88)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:28px}
+.flow{background:#fff;border:1px solid #dadbd6;border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:18px}
+.flow h3{margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:40px;line-height:1}
+.flow ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;counter-reset:f}
+.flow li{counter-increment:f;display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;font-size:16px;color:#3b404a}
+.flow li:before{content:counter(f,decimal-leading-zero);font-family:'Instrument Serif',Georgia,serif;font-size:30px;line-height:1;color:#2f54eb}
+.flow li b{color:#0d1117}
+.dark{background:#0d1117;color:#f6f6f3}.dark .eyb{color:#8ea6ff}.dark .it{color:#8ea6ff}.dark .lede{color:#c7cad1}
+.pbp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+.pbp div{border:1px solid #3b404a;border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.pbp b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:30px;line-height:1;color:#fff}
+.pbp span{font-size:15px;color:#c7cad1}
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:14px}
+.vs div{border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.vs .no{background:#1c2029}.vs .yes{background:#2f54eb}
+.vs small{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;font-weight:700}
+.vs .no small{color:#ff8a7a}.vs .yes small{color:#ffd23f}
+.vs p{margin:0;font-size:17px}
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,300px));gap:28px;justify-content:center}
+.ph{background:#1c2029;border-radius:44px;padding:12px;box-shadow:0 30px 60px rgba(0,0,0,.35),inset 0 0 0 2px #3b404a}
+.phs{background:#f6f6f3;color:#0d1117;border-radius:34px;padding:22px 18px;min-height:540px;display:flex;flex-direction:column;gap:10px;position:relative}
+.phs:before{content:"";position:absolute;top:10px;left:50%;width:90px;height:24px;margin-left:-45px;border-radius:14px;background:#1c2029}
+.pht{margin:26px 0 0;font-size:12px;color:#5b616e;font-weight:600}
+.phk{margin:0;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#2f54eb;font-weight:700}
+.phb{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:30px;line-height:1}
+.phs dl{margin:6px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 12px;font-size:14px;background:#fff;border-radius:16px;padding:14px;border:1px solid #dadbd6}
+.phs dt{color:#5b616e}.phs dd{margin:0;font-weight:600}
+.phbtn{margin-top:auto;background:#2f54eb;color:#fff;border-radius:999px;padding:13px;text-align:center;font-weight:700;font-size:15px}
+.pm{background:#fff;border:1px solid #dadbd6;border-radius:16px;padding:10px 12px;display:grid;grid-template-columns:52px 1fr;gap:2px 12px;align-items:center;position:relative}
+.pm img{grid-row:1/4;width:52px;height:52px;border-radius:50%;object-fit:cover}
+.pm b{font-size:15px}.pm span{font-size:12px;color:#5b616e}.pm em{font-style:normal;font-size:12px;color:#0d1117}
+.pm.hot{border:2px solid #2f54eb}.pm i{position:absolute;top:8px;right:10px;font-style:normal;font-size:10px;font-weight:700;background:#ffd23f;border-radius:999px;padding:2px 7px}
+.prof{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.prof img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid #2f54eb}
+.phs ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:7px}
+.phs li{background:#fff;border:1px solid #dadbd6;border-radius:12px;padding:9px 12px;font-size:13px;display:flex;gap:10px;align-items:center}
+.phs li b{font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:#2f54eb;width:14px}
+.phsample{margin:0;font-size:13px;color:#5b616e;text-align:center}
+.roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px}
+.slot{border:1.5px dashed #b9bcc4;border-radius:18px;padding:22px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;background:#fff}
+.slot small{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#5b616e}
+.slot b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px;line-height:1.05}
+.dir-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.chip{border:1px solid #dadbd6;background:#fff;border-radius:999px;padding:9px 15px;font:inherit;font-size:14px;cursor:pointer;color:#0d1117}
+.chip[aria-pressed="true"]{background:#0d1117;color:#fff;border-color:#0d1117}
+.search{flex:1 1 240px;min-height:44px;border:1px solid #dadbd6;border-radius:12px;padding:0 14px;font:inherit;font-size:15px;background:#fff}
+.dir{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:12px}
+.card{background:#fff;border:1px solid #dadbd6;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.card .t{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.06em;color:#2f54eb;font-weight:700;text-transform:uppercase}
+.card b{font-size:17px;line-height:1.25}
+.card .loc{font-size:14px;color:#3b404a}
+.card .n{font-size:14px;color:#5b616e}
+.card .tag{align-self:flex-start;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.06em;border:1px solid #dadbd6;border-radius:999px;padding:3px 8px;color:#5b616e;margin-top:auto}
+.card a{font-size:13px;color:#5b616e}
+.count{font-family:'Geist Mono',monospace;font-size:12px;color:#5b616e}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.sides{grid-template-columns:1fr}.hub{flex-direction:row}.phones{grid-template-columns:repeat(3,260px);justify-content:start;overflow-x:auto;padding-bottom:12px}.wrap{padding:64px 22px}}
+.refer{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+.steps3{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.steps3 li{display:grid;grid-template-columns:44px 1fr;gap:12px;font-size:16px;color:#3b404a}
+.steps3 li span:first-child{font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1;color:#2f54eb}
+.steps3 b{color:#0d1117}
+.seen{display:flex;flex-wrap:wrap;gap:8px}.seen span{background:#fff;border:1px solid #dadbd6;border-radius:999px;padding:7px 13px;font-size:14px}
+.rform{background:#fff;border:1px solid #dadbd6;border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rform label{display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.06em;color:#5b616e}
+.rform .full{grid-column:1/-1}
+.rform input,.rform select,.rform textarea{font:inherit;font-family:"Geist",system-ui,sans-serif;font-size:15px;letter-spacing:0;color:#0d1117;border:1px solid #dadbd6;border-radius:10px;padding:11px 12px;background:#f6f6f3}
+.rform textarea{min-height:96px;resize:vertical}
+.rform .sub{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#2f54eb;font-weight:700;grid-column:1/-1;margin-top:6px}
+.rform button{grid-column:1/-1;border:0;cursor:pointer;font:inherit}
+.reward{background:#0d1117;color:#f6f6f3;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.reward small{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#ffd23f;font-weight:700}
+@media (max-width:900px){.refer{grid-template-columns:1fr}.rform{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div style="width:100%">
+  <header style="border-bottom: 1px solid #dadbd6">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="/#top" style="text-decoration: none; display: flex; align-items: baseline; gap: 14px">
+        <span style="display: inline-flex; align-items: center; gap: 10px"><svg width="32" height="32" viewBox="0 0 48 48" aria-hidden="true"><line x1="24.00" y1="7.50" x2="24.00" y2="2.50" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="32.25" y1="9.71" x2="34.75" y2="5.38" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="38.29" y1="15.75" x2="42.62" y2="13.25" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="40.50" y1="24.00" x2="45.50" y2="24.00" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="38.29" y1="32.25" x2="42.62" y2="34.75" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="32.25" y1="38.29" x2="34.75" y2="42.62" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="24.00" y1="40.50" x2="24.00" y2="45.50" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="15.75" y1="38.29" x2="13.25" y2="42.62" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="9.71" y1="32.25" x2="5.38" y2="34.75" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="7.50" y1="24.00" x2="2.50" y2="24.00" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="9.71" y1="15.75" x2="5.38" y2="13.25" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><line x1="15.75" y1="9.71" x2="13.25" y2="5.38" stroke="#0d1117" stroke-width="2.6" stroke-linecap="round"/><path d="M24 15.2 V24 H30 L33.5 20" fill="none" stroke="#0d1117" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size: 19px; line-height: 1; letter-spacing: -0.025em; color: #0d1117; white-space: nowrap" aria-label="LifeSkills Lab"><span style="font-weight: 600">L<span style="position: relative; display: inline-block">ı<span style="position: absolute; left: 50%; top: -1.0px; width: 4.8px; height: 4.8px; margin-left: -2.4px; border-radius: 50%; background: #2f54eb"></span></span>feSkills</span><span style="font-weight: 400; opacity: 0.65"> Lab</span></span></span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px">
+        <a href="/#services" style="text-decoration: none; color: #3b404a">What We Do</a>
+        <a href="/#careerday" style="text-decoration: none; color: #3b404a">Career Lab</a>
+        <a href="/#method" style="text-decoration: none; color: #3b404a">The Method</a>
+        <a href="/network.html" aria-current="page" style="text-decoration: none; color: #2f54eb; font-weight: 600">The Network</a>
+        <a href="/#conference" style="text-decoration: none; color: #3b404a">Catalyst Conference</a>
+        <a href="/#contact" style="text-decoration: none; background: #0d1117; color: #f6f6f3; padding: 12px 18px; border-radius: 8px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Start a Conversation</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <span class="eyb">The Catalyst Network · Long Island</span>
+        <h1 class="h1">Great adults, <span class="it">matched one by one.</span></h1>
+        <p class="lede">Long Island programs need adults who can light kids up. Long Island is full of people with interesting jobs who could. The Catalyst Network connects the two sides, and every Catalyst is approved as a person, never because of where they work.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn p" href="#book">Book a Catalyst</a><a class="btn s" href="#become">Become a Catalyst</a><a class="btn s" href="#refer">Refer a Catalyst</a></div>
+      </div>
+      <div class="sides" aria-label="The two sides of the network">
+        <div class="side"><small>SIDE ONE · PROGRAMS</small><b>Schools, chapters, after-school programs and camps</b><span>They own the hours and need the right adults in the room.</span></div>
+        <div class="hub"><svg viewBox="-45 -45 90 90" width="56" height="56" aria-hidden="true"><polygon points="0.0,-22.0 3.1,-11.6 13.7,-23.7 8.5,-8.5 28.3,-16.3 11.6,-3.1 22.0,0.0 11.6,3.1 39.8,23.0 8.5,8.5 11.0,19.0 3.1,11.6 0.0,22.0 -3.1,11.6 -17.7,30.6 -8.5,8.5 -19.0,11.0 -11.6,3.1 -22.0,0.0 -11.6,-3.1 -19.0,-11.0 -8.5,-8.5 -20.3,-35.2 -3.1,-11.6" fill="#2f54eb"/></svg>LIFESKILLS<br>LAB</div>
+        <div class="side"><small>SIDE TWO · CATALYSTS</small><b>Professionals with interesting jobs and real tools</b><span>Vetted, trained, observed and rated, one person at a time.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="border-top:1px solid #dadbd6">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;flex-direction:column;gap:12px"><span class="eyb">How It Works</span><h2 class="h2">Two sides. <span class="it">One bar.</span></h2></div>
+      <div class="two">
+        <div class="flow" id="book"><span class="eyb" style="font-size:13px">For Programs</span><h3>Book a Catalyst</h3>
+          <ol>
+            <li><span><b>Tell us the need.</b> Your kids, their ages, the day and the theme.</span></li>
+            <li><span><b>Get matched.</b> We send Catalysts who already cleared the bar, with their ratings.</span></li>
+            <li><span><b>They run a L.I.F.T. session.</b> Launch, Inspire, Figure It Out, Teach Back.</span></li>
+            <li><span><b>See the growth.</b> Every kid's star goes into their Constellation Report, and you rate the session.</span></li>
+          </ol>
+          <a class="btn p" style="align-self:flex-start" href="/#contact">Tell Us What You Need</a></div>
+        <div class="flow" id="become"><span class="eyb" style="font-size:13px">For Catalysts</span><h3>Become a Catalyst</h3>
+          <ol>
+            <li><span><b>Apply.</b> Tell us what you do and the real tools you'd bring.</span></li>
+            <li><span><b>Get vetted.</b> A background check, references and a real interview.</span></li>
+            <li><span><b>Get trained.</b> We help you find the moments in your work that light a kid up, and shape them into a L.I.F.T. session.</span></li>
+            <li><span><b>Get observed, then placed.</b> We watch you teach before your first booking, and every session after is rated.</span></li>
+          </ol>
+          <a class="btn s" style="align-self:flex-start" href="/#contact">Apply to Be a Catalyst</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="person">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:820px"><span class="eyb">Person by Person</span><h2 class="h2">We vet people, <span class="it">not employers.</span></h2>
+        <p class="lede">Working at a great program doesn't make someone a Catalyst, and neither does having a great job. Kids don't separate the adult from the career, so one bad hour can close a door for good. Every Catalyst earns their place on their own.</p></div>
+      <div class="vs">
+        <div class="no"><small>NOT ENOUGH ON ITS OWN</small><p>Works for a well-known program, has an impressive title, or is a parent at the school.</p></div>
+        <div class="yes"><small>WHAT MAKES A CATALYST</small><p>An interesting job, the real tools to show it, great with kids, able to teach, and able to find the moments in their work that light a kid up.</p></div>
+      </div>
+      <div class="pbp">
+        <div><b>Relationships</b><span>Kids trust them fast. They learn names and pull in the kid hanging back.</span></div>
+        <div><b>Engagement</b><span>Kids' hands are busy, not just their eyes, and they ask for another round.</span></div>
+        <div><b>Rigor</b><span>Kids learn the real skill at their size, and every kid can teach one thing back.</span></div>
+      </div>
+      <p style="margin:0;color:#c7cad1">Four stars or better on all three, or no placement.</p>
+    </div>
+  </section>
+
+  <section id="finder" style="border-top:1px solid #dadbd6">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:760px"><span class="eyb">What Booking Looks Like</span><h2 class="h2">Need a Catalyst for Saturday? <span class="it">Book one in minutes.</span></h2></div>
+      <div class="phones">
+        <div class="ph"><div class="phs"><p class="pht">1 · Your request</p><p class="phk">NEW REQUEST</p><b class="phb">Saturday workshop</b>
+          <dl><dt>Who</dt><dd>Youth chapter</dd><dt>Kids</dt><dd>25, ages 9&#8209;12</dd><dt>When</dt><dd>Sat, 10 - 11:30am</dd><dt>Theme</dt><dd>Careers in health</dd><dt>Where</dt><dd>Garden City, NY</dd></dl>
+          <span class="phbtn">Find Catalysts</span></div></div>
+        <div class="ph"><div class="phs"><p class="pht">2 · Your matches</p><p class="phk">3 MATCHES · ALL VETTED</p>
+          <div class="pm hot"><img src="https://images.pexels.com/photos/6129496/pexels-photo-6129496.jpeg?auto=compress&amp;w=160&amp;h=160&amp;fit=crop" alt=""><b>Renee O.</b><span>ER nurse · 14 sessions</span><em>Relationships, Engagement, Rigor: 5.0</em><i>Top match</i></div>
+          <div class="pm"><img src="https://images.pexels.com/photos/6762869/pexels-photo-6762869.jpeg?auto=compress&amp;w=160&amp;h=160&amp;fit=crop" alt=""><b>Arjun M.</b><span>Physical therapist · 9 sessions</span><em>4.8 average</em></div>
+          <div class="pm"><img src="https://images.pexels.com/photos/17084273/pexels-photo-17084273.jpeg?auto=compress&amp;w=160&amp;h=160&amp;fit=crop" alt=""><b>Jenna K.</b><span>Veterinarian · 11 sessions</span><em>4.8 average</em></div>
+          <span class="phbtn">Request Renee</span></div></div>
+        <div class="ph"><div class="phs"><p class="pht">3 · You're booked</p><p class="phk">CONFIRMED</p>
+          <div class="prof"><img src="https://images.pexels.com/photos/6129496/pexels-photo-6129496.jpeg?auto=compress&amp;w=240&amp;h=240&amp;fit=crop" alt=""><b class="phb">Renee is in.</b></div>
+          <ul><li><b>L</b>Find your pulse in 60 seconds</li><li><b>I</b>A real stethoscope on a real heartbeat</li><li><b>F</b>Kids check each other's vitals</li><li><b>T</b>Teach a parent to take a pulse</li></ul>
+          <p style="margin:auto 0 0;font-size:12px;color:#3b404a;background:#eef1ff;border-radius:12px;padding:10px">Her background check, training and session plan are done, and every kid's star goes into their Constellation Report.</p></div></div>
+      </div>
+      <p class="phsample">Sample screens. The people shown are stock photos with made-up names, not real Catalysts.</p>
+    </div>
+  </section>
+
+  <section id="roster" style="border-top:1px solid #dadbd6;background:#fff">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:820px"><span class="eyb">Founding Catalysts</span><h2 class="h2">The first Catalysts <span class="it">are being chosen now.</span></h2>
+        <p class="lede">We only list people we know personally, who have cleared the bar and agreed to be listed. That's why this roster starts small.</p></div>
+      <div class="roster">
+        <div class="slot"><small>OPEN SEAT · HEALTH</small><b>A nurse, surgeon or medic</b><a href="/#contact">Apply or nominate →</a></div>
+        <div class="slot"><small>OPEN SEAT · FOOD</small><b>A chef or baker</b><a href="/#contact">Apply or nominate →</a></div>
+        <div class="slot"><small>OPEN SEAT · BUILD</small><b>A carpenter, mechanic or engineer</b><a href="/#contact">Apply or nominate →</a></div>
+        <div class="slot"><small>OPEN SEAT · BUSINESS</small><b>A founder or financial planner</b><a href="/#contact">Apply or nominate →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="refer" style="border-top:1px solid #dadbd6;background:#eef1ff">
+    <div class="wrap refer">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <span class="eyb">Refer a Catalyst</span>
+        <h2 class="h2">Seen someone <span class="it">light kids up?</span> Tell us.</h2>
+        <p class="lede" style="font-size:18px">The best Catalysts are already out there, and parents, coaches, schools and youth partners have seen them in action. If someone made kids' eyes go wide, we want to meet them.</p>
+        <div class="seen" aria-label="Where people spot Catalysts"><span>Ran the best part of a birthday party</span><span>Coached a game kids still talk about</span><span>Stole the show at Career Day</span><span>Taught a workshop at camp</span><span>Showed kids their workplace</span></div>
+        <ol class="steps3">
+          <li><span>01</span><span><b>Tell us who and what you saw.</b> Two minutes. Their name, what they do and the moment that stuck with you.</span></li>
+          <li><span>02</span><span><b>We reach out and mention you.</b> They go through the same bar as everyone else: vetted, trained, observed and rated.</span></li>
+          <li><span>03</span><span><b>If they join, you get a thank-you.</b> A credit toward your next LifeSkills Lab booking, for every referral who makes it into the network.</span></li>
+        </ol>
+        <div class="reward"><small>WHY IT MATTERS</small><span>Every Catalyst on Long Island makes the network stronger for every program in it. Your eye for great adults is how it grows.</span></div>
+      </div>
+      <form class="rform" id="rform" onsubmit="return sendRef(event)">
+        <span class="sub">ABOUT YOU</span>
+        <label>YOUR NAME<input name="yname" required autocomplete="name"></label>
+        <label>YOUR EMAIL<input name="yemail" type="email" required autocomplete="email"></label>
+        <label class="full">YOU ARE A<select name="yrole"><option>Parent</option><option>Youth partner or program</option><option>School</option><option>Coach</option><option>Other</option></select></label>
+        <span class="sub">ABOUT THE CATALYST</span>
+        <label>THEIR NAME<input name="cname" required></label>
+        <label>WHAT THEY DO FOR WORK<input name="cjob" required placeholder="e.g. ER nurse, pastry chef"></label>
+        <label>WHERE YOU SAW THEM<select name="where"><option>A birthday party</option><option>A game or practice they coached</option><option>Career Day</option><option>A camp or after-school program</option><option>Their workplace</option><option>Somewhere else</option></select></label>
+        <label>HOW TO REACH THEM (OPTIONAL)<input name="ccontact" placeholder="Email, phone or Instagram"></label>
+        <label class="full">WHAT HAPPENED?<textarea name="story" required placeholder="What did they do that lit the kids up?"></textarea></label>
+        <button class="btn p" type="submit" style="justify-content:center">Refer This Catalyst</button>
+        <p class="full" style="margin:0;font-size:13px;color:#5b616e">Opens your email with the referral filled in. We only reach out after a quick check, and we tell them you sent us.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="directory" style="border-top:1px solid #dadbd6">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:860px"><span class="eyb">The Long Island Directory</span><h2 class="h2">Who owns the hours <span class="it">on Long Island.</span></h2>
+        <p class="lede">A free, growing map of the independent schools, family and youth organizations, after-school programs and camps that shape kids' time outside class across Nassau and Suffolk. Built from public sources and checked November 24, 2026.</p>
+        <p style="margin:0;font-size:14px;color:#5b616e"><b>Listed is not partnered.</b> Every listing below is tagged "Public listing" and comes from the source linked on its card. Run one of these programs? <a href="/#contact">Claim, update or remove your listing.</a></p></div>
+      <div class="dir-tools" role="group" aria-label="Filter the directory">
+        <button class="chip" data-f="All" aria-pressed="true">All</button>
+        <button class="chip" data-f="School" aria-pressed="false">Independent Schools</button>
+        <button class="chip" data-f="Family + Youth Org" aria-pressed="false">Family + Youth Orgs</button>
+        <button class="chip" data-f="After-School" aria-pressed="false">After-School</button>
+        <button class="chip" data-f="Camp" aria-pressed="false">Camps</button>
+        <input class="search" type="search" placeholder="Search by name or town" aria-label="Search the directory">
+      </div>
+      <p class="count" id="count"></p>
+      <div class="dir" id="dir"></div>
+    </div>
+  </section>
+
+  <section class="dark" style="text-align:left">
+    <div class="wrap" style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+      <span class="eyb">Join the Network</span>
+      <h2 class="h2">Let's light up <span class="it">some stars.</span></h2>
+      <p class="lede">Whether you run a program that needs great adults, or you're great at something real and want kids to try it, start here.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn p" href="/#contact">Book a Catalyst</a><a class="btn" style="border:1.5px solid #f6f6f3;color:#f6f6f3" href="/#contact">Become a Catalyst</a></div>
+    </div>
+  </section>
+
+  <footer style="background: #0d1117; color: #8a8f99; border-top: 1px solid #23272f">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 28px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px">
+      <span style="display: inline-flex; align-items: center; gap: 10px"><svg width="26" height="26" viewBox="0 0 48 48" aria-hidden="true"><line x1="24.00" y1="7.50" x2="24.00" y2="2.50" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="32.25" y1="9.71" x2="34.75" y2="5.38" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="38.29" y1="15.75" x2="42.62" y2="13.25" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="40.50" y1="24.00" x2="45.50" y2="24.00" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="38.29" y1="32.25" x2="42.62" y2="34.75" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="32.25" y1="38.29" x2="34.75" y2="42.62" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="24.00" y1="40.50" x2="24.00" y2="45.50" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="15.75" y1="38.29" x2="13.25" y2="42.62" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="9.71" y1="32.25" x2="5.38" y2="34.75" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="7.50" y1="24.00" x2="2.50" y2="24.00" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="9.71" y1="15.75" x2="5.38" y2="13.25" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><line x1="15.75" y1="9.71" x2="13.25" y2="5.38" stroke="#f6f6f3" stroke-width="2.6" stroke-linecap="round"/><path d="M24 15.2 V24 H30 L33.5 20" fill="none" stroke="#f6f6f3" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span style="font-size: 15px; line-height: 1; letter-spacing: -0.025em; color: #f6f6f3; white-space: nowrap" aria-label="LifeSkills Lab"><span style="font-weight: 600">L<span style="position: relative; display: inline-block">ı<span style="position: absolute; left: 50%; top: -0.8px; width: 3.8px; height: 3.8px; margin-left: -1.9px; border-radius: 50%; background: #2f54eb"></span></span>feSkills</span><span style="font-weight: 400; opacity: 0.65"> Lab</span></span></span>
+      <span>LifeSkills Lab · Long Island, NY · Photos: Unsplash and Pexels.</span>
+    </div>
+  </footer>
+</div>
+<script>
+function sendRef(e){e.preventDefault();const f=new FormData(e.target);const g=k=>f.get(k)||'';
+const body=`Referral for the Catalyst Network\n\nReferred by: ${g('yname')} (${g('yrole')})\nEmail: ${g('yemail')}\n\nCatalyst: ${g('cname')}\nWork: ${g('cjob')}\nWhere seen: ${g('where')}\nHow to reach: ${g('ccontact')}\n\nWhat happened:\n${g('story')}`;
+location.href='mailto:chauncey@howiwithai.com?subject='+encodeURIComponent('Catalyst referral: '+g('cname'))+'&body='+encodeURIComponent(body);return false;}
+const D=[{"type": "School", "name": "Buckley Country Day School", "town": "Roslyn", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "East Woods School", "town": "Oyster Bay", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Friends Academy", "town": "Locust Valley", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Holy Child Academy", "town": "Old Westbury", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Hebrew Academy of Long Beach", "town": "Cedarhurst", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Long Island Lutheran", "town": "Brookville", "county": "Nassau", "note": "Independent school \u00b7 Day and boarding", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Long Island School for the Gifted", "town": "Syosset", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "North Shore Hebrew Academy", "town": "Great Neck", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Portledge School", "town": "Locust Valley", "county": "Nassau", "note": "Independent school \u00b7 Day school \u00b7 IB", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Schechter School of Long Island", "town": "East Williston", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "The Green Vale School", "town": "Old Brookville", "county": "Nassau", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "The Waldorf School of Garden City", "town": "Garden City", "county": "Nassau", "note": "Independent school \u00b7 Waldorf", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Vincent Smith School", "town": "Port Washington", "county": "Nassau", "note": "Independent school \u00b7 Special education", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Harbor Country Day School", "town": "St. James", "county": "Suffolk", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Ivy League School", "town": "Smithtown", "county": "Suffolk", "note": "Independent school \u00b7 Associate member", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Peconic Community School", "town": "Cutchogue", "county": "Suffolk", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "Ross School", "town": "East Hampton", "county": "Suffolk", "note": "Independent school \u00b7 Day and boarding", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "The Bridges Academy", "town": "West Islip", "county": "Suffolk", "note": "Independent school \u00b7 Day school", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "The Knox School", "town": "St. James", "county": "Suffolk", "note": "Independent school \u00b7 Day and boarding", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "School", "name": "The Stony Brook School", "town": "Stony Brook", "county": "Suffolk", "note": "Independent school \u00b7 Boarding", "url": "https://www.nysais.org/schools/?Region=Long+Island", "src": "NYSAIS member directory"}, {"type": "Family + Youth Org", "name": "Jack and Jill of America, Nassau County Chapter", "town": "Nassau County", "county": "Nassau", "note": "Leadership and service for Black families; chapter since 1958", "url": "https://longislandpress.com/2025/02/21/jack-and-jill-nassau-county", "src": "Long Island Press"}, {"type": "Family + Youth Org", "name": "Jack and Jill of America, Suffolk County Chapter", "town": "East Islip", "county": "Suffolk", "note": "Leadership and service for Black families", "url": "https://issuu.com/jackandjill1938/docs/2022_awd_cluster_journal_10.28.22", "src": "Jack and Jill Eastern Region journal"}, {"type": "Family + Youth Org", "name": "Girl Scouts of Nassau County", "town": "Garden City", "county": "Nassau", "note": "Countywide council", "url": "https://longisland.com/business/girl-scouts-of-nassau-county.html", "src": "LongIsland.com"}, {"type": "Family + Youth Org", "name": "Girl Scouts of Suffolk County", "town": "Commack", "county": "Suffolk", "note": "Countywide council", "url": "https://longisland.com/business/girl-scouts-of-suffolk-county.html", "src": "LongIsland.com"}, {"type": "Family + Youth Org", "name": "Girls Inc. of Long Island", "town": "Long Island", "county": "Suffolk", "note": "Programs for girls", "url": "https://suffolkcountyny.gov/Departments/Womens-Services/Youth-Programs", "src": "Suffolk County youth programs list"}, {"type": "Family + Youth Org", "name": "Theodore Roosevelt Council, Scouting America", "town": "Massapequa", "county": "Nassau", "note": "Nassau County scouting council", "url": "https://longisland.com/business/theodore-roosevelt-council-boy-scouts-of-america.html", "src": "LongIsland.com"}, {"type": "Family + Youth Org", "name": "Suffolk County Council, Scouting America", "town": "Medford", "county": "Suffolk", "note": "Suffolk County scouting council", "url": "https://longisland.com/business/long-island-sierra-club.html", "src": "LongIsland.com"}, {"type": "Family + Youth Org", "name": "Youth Enrichment Services (YES)", "town": "Central Islip", "county": "Suffolk", "note": "Youth programs", "url": "https://suffolkcountyny.gov/Departments/Womens-Services/Youth-Programs", "src": "Suffolk County youth programs list"}, {"type": "After-School", "name": "YMCA of Long Island", "town": "Multiple sites", "county": "Nassau + Suffolk", "note": "After-school, school-holiday and summer programs", "url": "https://mommypoppins.com/long-island-kids/suffolk-county-summer-day-camps-for-long-island-kids", "src": "Mommy Poppins"}, {"type": "After-School", "name": "Boys & Girls Club of Suffolk County", "town": "East Setauket", "county": "Suffolk", "note": "After-school and summer", "url": "https://www.op.nysed.gov/boys-girls-club-suffolk-county", "src": "NYSED approved entities"}, {"type": "After-School", "name": "Hicksville Youth Council's Boys & Girls Club", "town": "Hicksville", "county": "Nassau", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://mommypoppins.com/long-island-kids/directory/boys-girls-clubs-of-america", "src": "Mommy Poppins"}, {"type": "After-School", "name": "North Shore Boys & Girls Club", "town": "Glen Head", "county": "Nassau", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://mommypoppins.com/long-island-kids/directory/boys-girls-clubs-of-america", "src": "Mommy Poppins"}, {"type": "After-School", "name": "Glen Cove Boys & Girls Club at Lincoln House", "town": "Glen Cove", "county": "Nassau", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://mommypoppins.com/long-island-kids/directory/boys-girls-clubs-of-america", "src": "Mommy Poppins"}, {"type": "After-School", "name": "Grenville Baker Boys & Girls Club", "town": "Locust Valley", "county": "Nassau", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://mommypoppins.com/long-island-kids/directory/boys-girls-clubs-of-america", "src": "Mommy Poppins"}, {"type": "After-School", "name": "Boys & Girls Club of Oyster Bay\u2013East Norwich", "town": "Oyster Bay", "county": "Nassau", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://mommypoppins.com/long-island-kids/directory/boys-girls-clubs-of-america", "src": "Mommy Poppins"}, {"type": "After-School", "name": "Three Village Boys & Girls Club", "town": "Stony Brook", "county": "Suffolk", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://mommypoppins.com/long-island-kids/directory/boys-girls-clubs-of-america", "src": "Mommy Poppins"}, {"type": "After-School", "name": "Boys & Girls Club of the Bellport Area", "town": "Bellport", "county": "Suffolk", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://mommypoppins.com/long-island-kids/directory/boys-girls-clubs-of-america", "src": "Mommy Poppins"}, {"type": "After-School", "name": "Boys & Girls Club of Shinnecock Nation", "town": "Shinnecock Nation", "county": "Suffolk", "note": "Boys & Girls Club \u00b7 after-school and summer", "url": "https://www.bgca.org/news-stories/2024/October/shinnecock-nation-kids-embrace-native-heritage-every-day-after-school/", "src": "Boys & Girls Clubs of America"}, {"type": "Camp", "name": "Usdan Summer Camp for the Arts", "town": "Wheatley Heights", "county": "Suffolk", "note": "Arts day camp, ages 5 to 18 \u00b7 ACA accredited", "url": "https://www.usdan.org/node/2", "src": "Usdan"}, {"type": "Camp", "name": "Camps 'R' Us", "town": "11 locations", "county": "Nassau + Suffolk", "note": "Day camps \u00b7 ACA accredited", "url": "https://rockland.nymetroparents.com/listing/Camps--RUs-21990", "src": "NYMetroParents"}, {"type": "Camp", "name": "YMCA of Long Island Summer Day Camps", "town": "Multiple sites", "county": "Nassau + Suffolk", "note": "Day camps \u00b7 ACA accredited", "url": "https://ymcali.org/sites/default/files/2024-06/2024%20Camp%20Guide%20Final.pdf", "src": "YMCA of Long Island camp guide"}, {"type": "Camp", "name": "Future Stars Day Camps", "town": "Farmingdale", "county": "Suffolk", "note": "Sports and day camps", "url": "https://mommypoppins.com/long-island-kids/camps/best-summer-camps-in-suffolk-county-for-long-island-kids", "src": "Mommy Poppins"}, {"type": "Camp", "name": "Camp Harbor", "town": "St. James", "county": "Suffolk", "note": "Day camp", "url": "https://longisland.com/business/usdan-summer-camp-for-the-arts-.html", "src": "LongIsland.com"}, {"type": "Camp", "name": "Oasis Day Camps, LIU campus", "town": "Brookville", "county": "Nassau", "note": "Day camp, ages 5 to 16", "url": "https://mommypoppins.com/long-island-kids/camps/best-summer-camps-in-suffolk-county-for-long-island-kids", "src": "Mommy Poppins"}];
+const dir=document.getElementById('dir'),cnt=document.getElementById('count'),q=document.querySelector('.search');
+let f='All';
+function esc(t){return t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function draw(){const s=q.value.trim().toLowerCase();
+ const L=D.filter(d=>(f==='All'||d.type===f)&&(!s||(d.name+' '+d.town+' '+d.county).toLowerCase().includes(s)));
+ cnt.textContent=L.length+' of '+D.length+' listings';
+ dir.innerHTML=L.map(d=>`<article class="card"><span class="t">${esc(d.type==='School'?'Independent School':d.type)}</span><b>${esc(d.name)}</b><span class="loc">${esc(d.town)} · ${esc(d.county)}</span><span class="n">${esc(d.note)}</span><span class="tag">PUBLIC LISTING · NOT A CLIENT</span><a href="${d.url}" target="_blank" rel="noopener">Source: ${esc(d.src)}</a></article>`).join('');}
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{f=b.dataset.f;document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));draw();}));
+q.addEventListener('input',draw);draw();
+</script>
+</body>
+</html>
