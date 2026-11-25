@@ -526,10 +526,10 @@ function colorFor(n){return n>=21?'#b91c1c':n>=11?'#e11d48':n>=6?'#f97316':n>=3?
 function legend(){document.getElementById('maplegend').innerHTML='<b style="margin-right:4px">Listings per town</b>'+[['1-2','#fcd34d'],['3-5','#f59e0b'],['6-10','#f97316'],['11-20','#e11d48'],['21+','#b91c1c']].map(([l,c])=>`<span><i style="background:${c}"></i>${l}</span>`).join('')}
 function drawMap(L){if(!window.L){document.getElementById('limap').innerHTML='<p style="padding:20px">Map unavailable right now.</p>';return}
  if(!MAP){MAP=window.L.map('limap',{scrollWheelZoom:false,zoomSnap:.25}).fitBounds([[40.55,-73.78],[41.15,-71.86]]);
-  window.L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OpenStreetMap contributors &copy; CARTO',maxZoom:16}).addTo(MAP);legend()}
+  window.L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{attribution:'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',maxZoom:16}).addTo(MAP);legend()}
  if(LAYER)LAYER.remove();LAYER=window.L.layerGroup().addTo(MAP);
  const by={};let off=0;L.forEach(d=>{if(!d.ll){off++;return}const k=d.town;(by[k]=by[k]||{ll:d.ll,items:[]}).items.push(d)});
- Object.entries(by).forEach(([t,g])=>{const n=g.items.length;const m=window.L.circleMarker(g.ll,{radius:Math.min(6+Math.sqrt(n)*4.2,30),color:t===town?'#0d1117':'#fff',weight:t===town?3:1.5,fillColor:colorFor(n),fillOpacity:.85});
+ Object.entries(by).forEach(([t,g])=>{const n=g.items.length;const m=window.L.circleMarker(g.ll,{radius:Math.min(4+Math.sqrt(n)*2.6,18),color:t===town?'#0d1117':'#fff',weight:t===town?3:1.5,fillColor:colorFor(n),fillOpacity:.85});
   const names=g.items.slice(0,6).map(d=>`<span><i style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${TC[d.type]};margin-right:5px"></i>${esc(d.name)}</span>`).join('');
   m.bindTooltip(`<div class="tt"><b>${esc(t)}</b><em>${n} listing${n>1?'s':''}</em>${names}${n>6?`<span>+${n-6} more · click to see all</span>`:'<span>Click to filter</span>'}</div>`,{className:'tt',direction:'top',sticky:true,opacity:1});
   m.on('click',()=>{town=(town===t?'':t);draw();document.getElementById('count').scrollIntoView({behavior:'smooth',block:'start'})});m.addTo(LAYER)});
