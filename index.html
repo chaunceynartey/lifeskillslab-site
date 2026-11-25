@@ -656,7 +656,7 @@ h1,h2,h3{text-wrap:balance}
 document.getElementById('lsl-form').addEventListener('submit',function(e){
   e.preventDefault();var f=this,who=(f.querySelector('input[name=who]:checked')||{}).value||'';
   var body='Name: '+f.querySelector('#lsl-name').value+'\nEmail: '+f.querySelector('#lsl-email').value+'\nOrganization: '+f.querySelector('#lsl-org').value+'\nI am: '+who;
-  location.href='mailto:chauncey@howiwithai.com?subject='+encodeURIComponent('LifeSkills Lab: '+who)+'&body='+encodeURIComponent(body);
+  location.href='mailto:hello@lifeskillslab.ai?subject='+encodeURIComponent('LifeSkills Lab: '+who)+'&body='+encodeURIComponent(body);
 });
 </script>
 <style>
