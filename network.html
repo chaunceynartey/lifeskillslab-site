@@ -91,13 +91,14 @@ h1,h2,h3{text-wrap:balance}
 .steps3 li span:first-child{font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1;color:#2f54eb}
 .steps3 b{color:#0d1117}
 .seen{display:flex;flex-wrap:wrap;gap:8px}.seen span{background:#fff;border:1px solid #dadbd6;border-radius:999px;padding:7px 13px;font-size:14px}
-.rform{background:#fff;border:1px solid #dadbd6;border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rform{position:sticky;top:24px;background:#fff;border:1px solid #dadbd6;border-radius:24px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .rform label{display:flex;flex-direction:column;gap:6px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.06em;color:#5b616e}
 .rform .full{grid-column:1/-1}
 .rform input,.rform select,.rform textarea{font:inherit;font-family:"Geist",system-ui,sans-serif;font-size:15px;letter-spacing:0;color:#0d1117;border:1px solid #dadbd6;border-radius:10px;padding:11px 12px;background:#f6f6f3}
 .rform textarea{min-height:96px;resize:vertical}
 .rform .sub{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#2f54eb;font-weight:700;grid-column:1/-1;margin-top:6px}
 .rform button{grid-column:1/-1;border:0;cursor:pointer;font:inherit}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:12px}.perks div{background:#fff;border:1px solid #dadbd6;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:4px}.perks small{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#2f54eb;font-weight:700}.perks b{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:34px;line-height:1}.perks span{font-size:14px;color:#3b404a}
 .reward{background:#0d1117;color:#f6f6f3;border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:6px}
 .reward small{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;color:#ffd23f;font-weight:700}
 @media (max-width:900px){.refer{grid-template-columns:1fr}.rform{grid-template-columns:1fr}}
@@ -222,9 +223,13 @@ h1,h2,h3{text-wrap:balance}
         <ol class="steps3">
           <li><span>01</span><span><b>Tell us who and what you saw.</b> Two minutes. Their name, what they do and the moment that stuck with you.</span></li>
           <li><span>02</span><span><b>We reach out and mention you.</b> They go through the same bar as everyone else: vetted, trained, observed and rated.</span></li>
-          <li><span>03</span><span><b>If they join, you get a thank-you.</b> A credit toward your next LifeSkills Lab booking, for every referral who makes it into the network.</span></li>
+          <li><span>03</span><span><b>If they join, you both win.</b> You get 10% off your next LifeSkills Lab booking for every referral who makes it into the network, and the credits stack. They get a fast-track interview and first pick of open bookings.</span></li>
         </ol>
-        <div class="reward"><small>WHY IT MATTERS</small><span>Every Catalyst on Long Island makes the network stronger for every program in it. Your eye for great adults is how it grows.</span></div>
+        <div class="perks">
+          <div><small>FOR YOU</small><b>10% off</b><span>your next booking, for every referral who joins. Credits stack.</span></div>
+          <div><small>FOR THEM</small><b>Fast track</b><span>a fast-track interview and first pick of open bookings.</span></div>
+        </div>
+        <div class="reward"><small>BECOME A CATALYST SCOUT</small><span>Refer a Catalyst who joins and you become a Catalyst Scout: recognized on this page if you'd like, and first in line for the Catalyst Conference. Your eye for great adults is how the network grows.</span></div>
       </div>
       <form class="rform" id="rform" onsubmit="return sendRef(event)">
         <span class="sub">ABOUT YOU</span>
@@ -238,7 +243,7 @@ h1,h2,h3{text-wrap:balance}
         <label>HOW TO REACH THEM (OPTIONAL)<input name="ccontact" placeholder="Email, phone or Instagram"></label>
         <label class="full">WHAT HAPPENED?<textarea name="story" required placeholder="What did they do that lit the kids up?"></textarea></label>
         <button class="btn p" type="submit" style="justify-content:center">Refer This Catalyst</button>
-        <p class="full" style="margin:0;font-size:13px;color:#5b616e">Opens your email with the referral filled in. We only reach out after a quick check, and we tell them you sent us.</p>
+        <p class="full" style="margin:0;font-size:13px;color:#5b616e">Opens your email with the referral filled in. We only reach out after a quick check, and we tell them you sent us. Credits apply once your referral is approved and added to the network.</p>
       </form>
     </div>
   </section>
