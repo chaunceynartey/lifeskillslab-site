@@ -152,6 +152,21 @@ h1,h2,h3{text-wrap:balance}
 .addrow button{border:1.5px dashed #2f54eb;background:#eef1ff;color:#2f54eb;font:inherit;font-size:14px;font-weight:600;border-radius:999px;padding:9px 15px;cursor:pointer}
 .eform button.go{grid-column:1/-1;border:0;cursor:pointer;font:inherit;justify-content:center}
 @media (max-width:760px){.eform{grid-template-columns:1fr}.eform .two2{grid-column:1}.li{grid-template-columns:1fr}.li>*{grid-column:1/-1!important}}
+
+.proc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px;counter-reset:p}
+.proc li{background:#fff;border:1px solid #dadbd6;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;counter-increment:p;position:relative}
+.proc li:before{content:counter(p);font-family:'Instrument Serif',Georgia,serif;font-size:34px;line-height:1;color:#2f54eb}
+.proc li b{font-size:16px}.proc li span{font-size:14px;color:#3b404a}
+.proc li em{font-style:normal;align-self:flex-start;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.06em;font-weight:700;border-radius:999px;padding:3px 8px;background:#e8f5ec;color:#166534}
+.proc li em.pay{background:#fff4d6;color:#92400e}
+.rep{background:#0d1117;color:#f6f6f3;border-radius:24px;padding:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.rep h3{margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(30px,3.6vw,44px);line-height:1.05}
+.rep h3 i{color:#8ea6ff}.rep p{margin:0;color:#c7cad1;font-size:16px}.rep b{color:#fff}
+.rep ul{margin:0;padding-left:18px;color:#c7cad1;font-size:15px;display:flex;flex-direction:column;gap:8px}
+@media (max-width:760px){.rep{grid-template-columns:1fr}}
+.dims{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.dims label{flex-direction:row;align-items:center;gap:8px;border:1px solid #dadbd6;border-radius:999px;padding:8px 14px;font-family:"Geist",system-ui,sans-serif;font-size:14px;letter-spacing:0;color:#0d1117;cursor:pointer;background:#f6f6f3}
+.dims input{margin:0;accent-color:#2f54eb}
 </style>
 </head>
 <body>
@@ -309,6 +324,23 @@ h1,h2,h3{text-wrap:balance}
         <div><small>A LECTURE WITH WORKSHEETS</small><b>A workshop that builds</b><span>A full L.I.F.T. session: kids leave having made something and taught it back.</span></div>
         <div><small>CHAPERONES</small><b>Staff who are Catalysts</b><span>Every adult runs a station or leads a small group, so no kid just waits.</span></div>
       </div>
+      <div style="display:flex;flex-direction:column;gap:12px"><span class="eyb" style="font-size:14px">How a Request Works</span>
+      <ol class="proc">
+        <li><b>You send the request.</b><span>Fill in the form below, piece by piece.</span><em>FREE</em></li>
+        <li><b>We review it.</b><span>Within two school days we tell you straight: yes, yes with changes, or not a fit.</span><em>FREE</em></li>
+        <li><b>You start discovery.</b><span>A discovery fee opens the work: a call, a draft plan and a shortlist of Catalysts for each piece.</span><em class="pay">DISCOVERY FEE · CREDITED TO YOUR BOOKING</em></li>
+        <li><b>We shape it together.</b><span>You react to the plan and the Catalysts. We revise until every piece is hands-on and right for your kids.</span><em>INCLUDED</em></li>
+        <li><b>You confirm and book.</b><span>Sign off, we lock the Catalysts and prep each one on your room and your goals.</span><em class="pay">BOOKING</em></li>
+        <li><b>The day, then the proof.</b><span>Catalysts deliver. You rate every piece, and kids' stars go into their Constellation Reports.</span><em>INCLUDED</em></li>
+      </ol></div>
+      <div class="rep">
+        <div style="display:flex;flex-direction:column;gap:14px"><span class="eyb" style="font-size:13px;color:#ffd23f">Who Kids See</span><h3>We ask about representation. <i>Out loud.</i></h3>
+          <p>Most networks get quiet here. We don't. When a kid sees someone who shares their story doing work they never pictured, the door opens wider. So you can tell us what matters for your room: gender, race and ethnicity, language, first-generation college, disability, or a path like an HBCU, a trade or the military.</p></div>
+        <div style="display:flex;flex-direction:column;gap:14px"><p><b>Two things we ask in return.</b></p>
+          <ul><li><b>Tell us why it matters for your kids or your event.</b> "Our girls have never met a woman engineer" helps us plan. A checkbox alone doesn't.</li>
+          <li><b>Stay open.</b> Kids get lifted by people who don't share their identity all the time. A girl can find her calling through a man who's great at his craft. A kid can catch fire watching someone from a world nothing like theirs. The best room has both.</li></ul>
+          <p>Representation is something we plan for, never a gate. Every Catalyst clears the same bar, and no one is turned away for who they are.</p></div>
+      </div>
       <form class="eform" onsubmit="return sendEvt(event)">
         <span class="sub">1 · YOUR ORGANIZATION</span>
         <label>ORGANIZATION<input name="org" required placeholder="e.g. a youth chapter or a school"></label>
@@ -324,10 +356,15 @@ h1,h2,h3{text-wrap:balance}
         <p class="full" style="margin:0;font-size:14px;color:#3b404a">Add one line for each piece. Fill in who and what it's about, and we'll read it back as a sentence. Add as many as you need.</p>
         <div id="lines" class="full" style="display:flex;flex-direction:column;gap:22px;margin-top:6px"></div>
         <div class="addrow"><button type="button" data-add="Panel">+ Panel</button><button type="button" data-add="Keynote">+ Keynote</button><button type="button" data-add="Workshop">+ Workshop</button><button type="button" data-add="Hands-on station">+ Hands-on station</button><button type="button" data-add="Event staff">+ Event staff</button><button type="button" data-add="Something else">+ Something else</button></div>
-        <span class="sub">4 · ANYTHING ELSE</span>
+        <span class="sub">4 · WHO KIDS SEE (OPTIONAL)</span>
+        <p class="full" style="margin:0;font-size:14px;color:#3b404a">Check anything that matters for this event. If you check something, tell us why.</p>
+        <div class="dims"><label><input type="checkbox" name="dim" value="Gender">Gender</label><label><input type="checkbox" name="dim" value="Race and ethnicity">Race and ethnicity</label><label><input type="checkbox" name="dim" value="Language spoken">Language spoken</label><label><input type="checkbox" name="dim" value="First-generation college">First-generation college</label><label><input type="checkbox" name="dim" value="Disability">Disability</label><label><input type="checkbox" name="dim" value="Path (HBCU, trade, military)">Path (HBCU, trade, military)</label><label><input type="checkbox" name="dim" value="Something else">Something else</label></div>
+        <label class="full">WHAT REPRESENTATION WOULD MATTER MOST<input name="repwhat" placeholder="e.g. at least one woman on the engineering panel; HBCU grads leading the keynote"></label>
+        <label class="full">WHY IT MATTERS FOR YOUR KIDS OR THIS EVENT<textarea name="repwhy" placeholder="e.g. most of our students would be the first in their family to go to college, and they've rarely met professionals from HBCUs"></textarea></label>
+        <span class="sub">5 · ANYTHING ELSE</span>
         <label class="full">GOALS, BUDGET OR ANYTHING WE SHOULD KNOW<textarea name="more" placeholder="e.g. we want students to leave with one real contact in a field they care about"></textarea></label>
         <button class="btn p go" type="submit">Send My Event Request</button>
-        <p class="full" style="margin:0;font-size:13px;color:#5b616e">Opens your email with your request laid out line by line. We reply with a plan and the Catalysts we'd put in each piece. Nothing is booked until you say yes.</p>
+        <p class="full" style="margin:0;font-size:13px;color:#5b616e">Opens your email with your request laid out line by line. Sending it is free. We review it and tell you what's possible within two school days. Nothing is charged or booked until you say yes.</p>
       </form>
     </div>
   </section>
@@ -377,6 +414,7 @@ function addLine(kind){ln++;const id=ln;const el=document.createElement('div');e
  <label class="w1">FROM<input name="t1" placeholder="10am"></label>
  <label class="w1">TO<input name="t2" placeholder="11am"></label>
  <label class="w1">AGES<input name="ages" placeholder="Grades 9-12"></label>
+ <label class="w6">REPRESENTATION FOR THIS PIECE (OPTIONAL)<input name="rep" placeholder="e.g. at least one woman in STEM"></label>
  <label class="w6">THE HANDS-ON MOMENT (WHAT KIDS TOUCH, TRY OR BUILD)<input name="hand" placeholder="Not sure yet? Leave it blank and we'll design one"></label>
  <p class="hint">${HINT[kind]}</p><p class="preview"></p>`;
  document.getElementById('lines').appendChild(el);upd(el);}
@@ -386,13 +424,14 @@ function said(el){const g=n=>el.querySelector(`[name=${n}]`).value.trim();const 
  return noun+(who?(k==='Panel'?' ':by+' ')+who:'')+(on?', focused on '+on:'')+(t1||t2?', '+(t1||'?')+' - '+(t2||'?'):'')+'.'}
 function upd(el){el.querySelector('.preview').textContent='"'+said(el)+'"';el.querySelector('.hint').textContent=HINT[el.querySelector('[name=k]').value];
  document.querySelectorAll('.li').forEach((x,i)=>x.querySelector('.num').textContent='LINE '+(i+1));}
-document.addEventListener('input',e=>{const el=e.target.closest('.li');if(el)upd(el)});
+document.addEventListener('input',e=>{if(e.target.name==='repwhy')e.target.setCustomValidity('');const el=e.target.closest('.li');if(el)upd(el)});
 document.addEventListener('change',e=>{const el=e.target.closest('.li');if(el)upd(el)});
 document.addEventListener('click',e=>{const a=e.target.closest('[data-add]');if(a){addLine(a.dataset.add);return}const r=e.target.closest('.rm');if(r){r.closest('.li').remove();document.querySelectorAll('.li').forEach((x,i)=>x.querySelector('.num').textContent='LINE '+(i+1))}});
 ['Panel','Keynote','Workshop'].forEach(addLine);
 function sendEvt(e){e.preventDefault();const f=new FormData(e.target);const g=k=>f.get(k)||'';
- const lines=[...document.querySelectorAll('.li')].map((el,i)=>{const h=el.querySelector('[name=hand]').value.trim(),a=el.querySelector('[name=ages]').value.trim();return (i+1)+'. '+said(el)+(a?' Ages: '+a+'.':'')+'\n   Hands-on moment: '+(h||'please design one')}).join('\n');
- const body=`Event request for the Catalyst Network\n\nOrganization: ${g('org')}\nContact: ${g('name')} (${g('email')})\n\nEvent: ${g('ename')}\nDate: ${g('edate')}\nLocation: ${g('eloc')}\nWho's in the room: ${g('aud')}\nEvent hours: ${g('ehrs')}\n\nWhat we need:\n${lines}\n\nAnything else:\n${g('more')}`;
+ const lines=[...document.querySelectorAll('.li')].map((el,i)=>{const h=el.querySelector('[name=hand]').value.trim(),a=el.querySelector('[name=ages]').value.trim();const rp=el.querySelector('[name=rep]').value.trim();return (i+1)+'. '+said(el)+(a?' Ages: '+a+'.':'')+(rp?'\n   Representation: '+rp:'')+'\n   Hands-on moment: '+(h||'please design one')}).join('\n');
+ const body=`Event request for the Catalyst Network\n\nOrganization: ${g('org')}\nContact: ${g('name')} (${g('email')})\n\nEvent: ${g('ename')}\nDate: ${g('edate')}\nLocation: ${g('eloc')}\nWho's in the room: ${g('aud')}\nEvent hours: ${g('ehrs')}\n\nWhat we need:\n${lines}\n\nWho kids see: ${f.getAll('dim').join(', ')||'no preference given'}\nWhat matters most: ${g('repwhat')}\nWhy it matters: ${g('repwhy')}\n\nAnything else:\n${g('more')}`;
+ const wy=e.target.querySelector('[name=repwhy]');wy.setCustomValidity(f.getAll('dim').length&&!g('repwhy').trim()?'You checked a box above. Tell us why it matters for your kids or this event.':'');if(!wy.reportValidity())return false;
  location.href='mailto:chauncey@howiwithai.com?subject='+encodeURIComponent('Event request: '+g('ename')+' ('+g('org')+')')+'&body='+encodeURIComponent(body);return false;}
 function sendRef(e){e.preventDefault();const f=new FormData(e.target);const g=k=>f.get(k)||'';
 const body=`Referral for the Catalyst Network\n\nReferred by: ${g('yname')} (${g('yrole')})\nEmail: ${g('yemail')}\n\nCatalyst: ${g('cname')}\nWork: ${g('cjob')}\nWhere seen: ${g('where')}\nHow to reach: ${g('ccontact')}\n\nWhat happened:\n${g('story')}`;
