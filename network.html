@@ -354,7 +354,9 @@ h1,h2,h3{text-wrap:balance}
         <div><small>FOUR PEOPLE AT A TABLE</small><b>A panel with props</b><span>Each panelist brings one real tool from their work, and kids try it before the Q&amp;A starts.</span></div>
         <div><small>A SLIDESHOW</small><b>A keynote kids join</b><span>A live demo the whole room takes part in, so the big idea lands in their hands.</span></div>
         <div><small>A LECTURE WITH WORKSHEETS</small><b>A workshop that builds</b><span>A full L.I.F.T. session: kids leave having made something and taught it back.</span></div>
-        <div><small>CHAPERONES</small><b>Staff who are Catalysts</b><span>Every adult runs a station or leads a small group, so no kid just waits.</span></div>
+        <div><small>PARENTS AT A PODIUM</small><b>A Career Day kids try</b><span>Each Catalyst brings the real tools of their work, and kids rotate through and use them.</span></div>
+        <div><small>CHAPERONES</small><b>Group Leads who are Catalysts</b><span>Every adult guides a small crew or runs a station, so no kid just waits.</span></div>
+        <div><small>A SCREEN AND A LECTURE</small><b>Virtual that still gets hands busy</b><span>Kits ship ahead or kids use what's at home, so a video call becomes a build.</span></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:12px"><span class="eyb" style="font-size:14px">How a Request Works</span>
       <ol class="proc">
@@ -387,7 +389,7 @@ h1,h2,h3{text-wrap:balance}
         <span class="sub">3 · WHAT YOU NEED</span>
         <p class="full" style="margin:0;font-size:14px;color:#3b404a">Add one line for each piece. Fill in who and what it's about, and we'll read it back as a sentence. Add as many as you need.</p>
         <div id="lines" class="full" style="display:flex;flex-direction:column;gap:22px;margin-top:6px"></div>
-        <div class="addrow"><button type="button" data-add="Panel">+ Panel</button><button type="button" data-add="Keynote">+ Keynote</button><button type="button" data-add="Workshop">+ Workshop</button><button type="button" data-add="Hands-on station">+ Hands-on station</button><button type="button" data-add="Event staff">+ Event staff</button><button type="button" data-add="Something else">+ Something else</button></div>
+        <div class="addrow"><button type="button" data-add="Panel">+ Panel</button><button type="button" data-add="Keynote">+ Keynote</button><button type="button" data-add="Workshop">+ Workshop</button><button type="button" data-add="Career Day">+ Career Day</button><button type="button" data-add="Hands-On Station">+ Hands-On Station</button><button type="button" data-add="Group Leads">+ Group Leads</button><button type="button" data-add="Something Else">+ Something Else</button></div>
         <span class="sub">4 · WHO KIDS SEE (OPTIONAL)</span>
         <p class="full" style="margin:0;font-size:14px;color:#3b404a">Check anything that matters for this event. If you check something, tell us why.</p>
         <div class="dims"><label><input type="checkbox" name="dim" value="Gender">Gender</label><label><input type="checkbox" name="dim" value="Race and ethnicity">Race and ethnicity</label><label><input type="checkbox" name="dim" value="Language spoken">Language spoken</label><label><input type="checkbox" name="dim" value="First-generation college">First-generation college</label><label><input type="checkbox" name="dim" value="Disability">Disability</label><label><input type="checkbox" name="dim" value="Path (HBCU, trade, military)">Path (HBCU, trade, military)</label><label><input type="checkbox" name="dim" value="Something else">Something else</label></div>
@@ -452,24 +454,26 @@ h1,h2,h3{text-wrap:balance}
 </div>
 <script>
 
-const HINT={'Panel':'Ask each panelist to bring one real tool from their job. Kids try it first, then ask questions.','Keynote':'Plan one moment where the whole room does something together, not just listens.','Workshop':'Workshops run as L.I.F.T. sessions: Launch, Inspire, Figure It Out, Teach Back.','Hands-on station':'Stations work best with 6 to 10 kids at a time, rotating every 15 to 20 minutes.','Event staff':'Staff who are Catalysts lead small groups or run a station, so no kid is just waiting.','Something else':'Tell us what it is. If kids are in the room, we will find the hands-on version.'};
+const HINT={'Panel':'Ask each panelist to bring one real tool from their job. Kids try it first, then ask questions.','Keynote':'Plan one moment where the whole room does something together, not just listens.','Workshop':'Workshops run as L.I.F.T. sessions: Launch, Inspire, Figure It Out, Teach Back.','Career Day':'Not a line of parents at a podium. Each Catalyst brings the real tools of their work and kids rotate through, trying each one.','Hands-On Station':'Stations work best with 6 to 10 kids at a time, rotating every 15 to 20 minutes.','Group Leads':'Group Leads are Catalysts who guide a small crew of kids through the day, so no kid is ever just waiting.','Something Else':'Tell us what it is. If kids are in the room, we will find the hands-on version.'};
 let ln=0;
 function addLine(kind){ln++;const id=ln;const el=document.createElement('div');el.className='li';el.dataset.id=id;
  el.innerHTML=`<span class="num">LINE ${document.querySelectorAll('.li').length+1}</span><button type="button" class="rm" aria-label="Remove this line">Remove ✕</button>
  <label class="w2">WHAT<select name="k">${Object.keys(HINT).map(k=>`<option${k===kind?' selected':''}>${k}</option>`).join('')}</select></label>
- <label class="w1">HOW MANY<input name="n" type="number" min="1" value="${kind==='Panel'?4:kind==='Event staff'?6:1}"></label>
+ <label class="w1">HOW MANY<input name="n" type="number" min="1" value="${kind==='Panel'?4:kind==='Group Leads'?6:kind==='Career Day'?5:1}"></label>
  <label class="w3">OF WHO<input name="who" placeholder="e.g. HBCU grads in engineering and medicine"></label>
  <label class="w3">FOCUSED ON<input name="on" placeholder="e.g. how they chose their school and what college is really like"></label>
  <label class="w1">FROM<input name="t1" placeholder="10am"></label>
  <label class="w1">TO<input name="t2" placeholder="11am"></label>
  <label class="w1">AGES<input name="ages" placeholder="Grades 9-12"></label>
+ <label class="w3">FORMAT<select name="fmt"><option>In Person</option><option>Virtual</option><option>Hybrid</option></select></label>
  <label class="w6">REPRESENTATION FOR THIS PIECE (OPTIONAL)<input name="rep" placeholder="e.g. at least one woman in STEM"></label>
  <label class="w6">THE HANDS-ON MOMENT (WHAT KIDS TOUCH, TRY OR BUILD)<input name="hand" placeholder="Not sure yet? Leave it blank and we'll design one"></label>
  <p class="hint">${HINT[kind]}</p><p class="preview"></p>`;
  document.getElementById('lines').appendChild(el);upd(el);}
 function said(el){const g=n=>el.querySelector(`[name=${n}]`).value.trim();const k=g('k'),n=+g('n')||1,who=g('who'),on=g('on'),t1=g('t1'),t2=g('t2');
- const noun={'Panel':'A panel of '+n,'Keynote':n>1?n+' keynotes':'A keynote','Workshop':n>1?n+' workshops':'A workshop','Hands-on station':n>1?n+' hands-on stations':'A hands-on station','Event staff':n+' event staff','Something else':'Something else'}[k];
- const by={'Panel':'','Keynote':' by','Workshop':' led by','Hands-on station':' run by','Event staff':':','Something else':':'}[k];
+ const fm=g('fmt'),vf=fm==='Virtual'?'virtual ':fm==='Hybrid'?'hybrid ':'';
+ const noun={'Panel':'A '+vf+'panel of '+n,'Keynote':n>1?n+' '+vf+'keynotes':'A '+vf+'keynote','Workshop':n>1?n+' '+vf+'workshops':'A '+vf+'workshop','Career Day':'A '+vf+'Career Day with '+n+' Catalysts','Hands-On Station':n>1?n+' Hands-On Stations':'A Hands-On Station','Group Leads':n+' Group Leads','Something Else':'Something else'}[k];
+ const by={'Panel':'','Keynote':' by','Workshop':' led by','Career Day':':','Hands-On Station':' run by','Group Leads':':','Something Else':':'}[k];
  return noun+(who?(k==='Panel'?' ':by+' ')+who:'')+(on?', focused on '+on:'')+(t1||t2?', '+(t1||'?')+' - '+(t2||'?'):'')+'.'}
 function upd(el){el.querySelector('.preview').textContent='"'+said(el)+'"';el.querySelector('.hint').textContent=HINT[el.querySelector('[name=k]').value];
  document.querySelectorAll('.li').forEach((x,i)=>x.querySelector('.num').textContent='LINE '+(i+1));}
